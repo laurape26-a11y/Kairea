@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairea — Web, SEO y redes sociales para autónomos y pymes</title>
+<meta name="description" content="Estudio creativo para autónomos y pymes: gestión de redes sociales, SEO/blog y webs en HTML propio. Sin plantillas, sin rotación de gestores. Diagnóstico gratuito.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kaireaestudio.com/">
+<meta name="author" content="Kairea">
+<meta name="theme-color" content="#1C1512">
+
+<!-- Open Graph / Facebook, Instagram, WhatsApp, LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kairea">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://kaireaestudio.com/">
+<meta property="og:title" content="Kairea — Web, SEO y redes sociales para autónomos y pymes">
+<meta property="og:description" content="No eres un número. Un estudio, no una fábrica de proyectos. Gestión de redes, SEO/blog y webs en HTML propio, con una sola persona detrás de cada marca.">
+<meta property="og:image" content="https://kaireaestudio.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kairea — Web, SEO y redes sociales para autónomos y pymes">
+<meta name="twitter:description" content="No eres un número. Un estudio, no una fábrica de proyectos.">
+<meta name="twitter:image" content="https://kaireaestudio.com/og-image.png">
+
+<!-- Datos estructurados: qué es Kairea, para buscadores y para IA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Kairea",
+  "alternateName": "Kairea Estudio",
+  "url": "https://kaireaestudio.com/",
+  "description": "Estudio creativo para autónomos y pymes: gestión de redes sociales, SEO/gestión de blog y webs en HTML propio, sin plantillas ni rotación de gestores.",
+  "email": "info@kaireaestudio.com",
+  "areaServed": "ES",
+  "priceRange": "€€",
+  "sameAs": []
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #1C1512;
+    --ink-deep: #100C0A;
+    --ink-raise: #241A16;
+    --terracota: #C1502E;
+    --ambar: #E8A94C;
+    --crema: #F5EFE6;
+    --crema-dim: #C9BFB0;
+    --line: rgba(245,239,230,0.12);
+    --k-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 32 32'%3E%3Ctext x='2' y='24' font-family='Georgia,serif' font-size='22' font-weight='700' fill='%23F5EFE6'%3Ek%3C/text%3E%3Ccircle cx='23' cy='7' r='3.4' fill='%23C1502E'/%3E%3C/svg%3E") 4 6, auto;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--crema);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    cursor:var(--k-cursor);
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;}
+  a{color:inherit;cursor:var(--k-cursor);}
+  button{cursor:var(--k-cursor);}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 28px;position:relative;z-index:3;}
+
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    opacity:0.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  #drops{position:fixed;inset:0;z-index:2;pointer-events:none;}
+
+  nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(28,21,18,0.78);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px;}
+  .logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;letter-spacing:0.02em;}
+  .logo-img{height:30px;width:auto;display:block;}
+  .logo span{color:var(--terracota);}
+  .logo .dot-i{position:relative;}
+  .logo .dot-i::after{
+    content:"";position:absolute;top:-0.42em;left:0.5px;
+    width:4px;height:4px;border-radius:50%;background:var(--terracota);
+  }
+  .nav-cta{
+    font-size:0.85rem;font-weight:600;
+    padding:9px 18px;border:1px solid rgba(245,239,230,0.3);border-radius:100px;
+    transition:all .25s ease;
+  }
+  .nav-cta:hover{background:var(--terracota);border-color:var(--terracota);transform:translateY(-1px);}
+
+  /* TICKER BANDS */
+  .ticker{
+    position:relative;z-index:15;
+    background:linear-gradient(90deg, var(--terracota), var(--ambar));
+    color:var(--ink-deep);
+    overflow:hidden;
+    white-space:nowrap;
+    border-bottom:1px solid var(--line);
+  }
+  .ticker-track{
+    display:inline-flex;align-items:center;
+    animation:tickerMove 26s linear infinite;
+    font-weight:700;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;
+  }
+  .ticker-track span{padding:12px 22px;display:inline-flex;align-items:center;gap:22px;}
+  .ticker-track span::after{content:"✦";opacity:0.6;font-weight:400;}
+  @keyframes tickerMove{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+
+  .stat-strip{
+    background:var(--ink-raise);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:32px 0;
+    position:relative;z-index:3;
+    text-align:center;
+  }
+  .stat-strip .stat-num{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2.2rem,5vw,3.2rem);
+    background:linear-gradient(135deg, var(--ambar), var(--terracota));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    line-height:1;
+  }
+  .stat-strip .stat-label{
+    margin-top:8px;font-size:0.9rem;color:var(--crema-dim);
+    max-width:44ch;margin-left:auto;margin-right:auto;
+  }
+
+  .hero{
+    position:relative;
+    padding:110px 0 100px;
+    overflow:hidden;
+  }
+  .hero-glow{
+    position:absolute;inset:-20% -10%;z-index:0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(193,80,46,0.35), transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(232,169,76,0.25), transparent 50%),
+      radial-gradient(circle at 50% 100%, rgba(193,80,46,0.15), transparent 55%);
+    filter:blur(40px);
+    animation:drift 16s ease-in-out infinite alternate;
+  }
+  @keyframes drift{
+    0%{transform:translate(0,0) scale(1);}
+    100%{transform:translate(-3%,3%) scale(1.08);}
+  }
+  .eyebrow{
+    font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--ambar);font-weight:600;margin-bottom:22px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{
+    content:"";width:7px;height:7px;border-radius:50%;
+    background:var(--terracota);
+    box-shadow:0 0 12px 2px rgba(193,80,46,0.7);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:1;transform:scale(1);}
+    50%{opacity:0.5;transform:scale(0.7);}
+  }
+  h1{
+    font-size:clamp(2.4rem, 6vw, 4.8rem);
+    line-height:1.03;
+    max-width:12ch;
+    background:linear-gradient(100deg, var(--crema) 30%, var(--ambar) 50%, var(--terracota) 65%, var(--crema) 85%);
+    background-size:250% auto;
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    animation:shine 7s linear infinite;
+  }
+  @keyframes shine{ to{background-position:250% center;} }
+  .hero-sub{ margin-top:28px; font-size:1.18rem; color:var(--crema-dim); max-width:46ch; }
+  .hero-actions{display:flex;gap:16px;margin-top:42px;flex-wrap:wrap;}
+  .btn-primary{
+    background:linear-gradient(135deg, var(--terracota), var(--ambar));
+    background-size:180% 180%;
+    color:var(--ink-deep);
+    padding:16px 32px;border-radius:100px;
+    font-weight:700;font-size:0.95rem;
+    text-decoration:none;display:inline-block;
+    transition:transform .25s ease, box-shadow .25s ease, background-position .5s ease;
+    box-shadow:0 8px 28px rgba(193,80,46,0.28);
+  }
+  .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 36px rgba(193,80,46,0.42);background-position:100% 50%;}
+  .btn-ghost{
+    padding:16px 26px;border-radius:100px;border:1px solid var(--line);
+    font-weight:600;font-size:0.95rem;text-decoration:none;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .btn-ghost:hover{border-color:var(--ambar);background:rgba(232,169,76,0.08);}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  section{padding:96px 0;border-top:1px solid var(--line);position:relative;z-index:3;}
+  .section-head{max-width:54ch;margin-bottom:56px;position:relative;}
+  .section-label{
+    font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--ambar);font-weight:600;margin-bottom:14px;
+  }
+  h2{font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--crema);}
+
+  .logo-wall{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 52px;padding:12px 0 4px;}
+  .logo-spec{font-size:clamp(1.3rem,3vw,1.9rem);color:var(--crema-dim);opacity:0.8;transition:color .3s ease, opacity .3s ease;}
+  .logo-spec:hover{color:var(--ambar);opacity:1;}
+  @media(max-width:640px){.logo-wall{gap:16px 30px;}}
+
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;}
+  .logos-band{
+    background:var(--crema);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:14px 0;
+    position:relative;z-index:3;
+  }
+  .logos-track{
+    display:inline-flex;align-items:center;
+    animation:logosMove 22s linear infinite;
+  }
+  .logos-band:hover .logos-track{animation-play-state:paused;}
+  .logo-name{
+    font-family:'Fraunces',serif;font-weight:600;font-size:0.92rem;
+    color:var(--ink);letter-spacing:0.01em;
+    padding:0 24px;opacity:0.65;
+  }
+  .logo-dot{color:var(--terracota);font-size:0.6rem;opacity:0.55;}
+  @keyframes logosMove{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media (max-width:600px){
+    .logo-name{font-size:0.82rem;padding:0 16px;}
+  }
+  #para-quien{padding:70px 0;}
+  .qualifier-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;}
+  .qualifier-col{background:var(--ink-raise);padding:32px 30px;}
+  .qualifier-col.qualifier-yes{background:linear-gradient(160deg, rgba(193,80,46,0.12), var(--ink-raise) 60%);}
+  .qualifier-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:14px;}
+  .qualifier-list li{position:relative;padding-left:26px;font-size:0.95rem;color:var(--crema-dim);line-height:1.55;}
+  .qualifier-yes .qualifier-list li::before{content:"✓";position:absolute;left:0;color:var(--terracota);font-weight:700;}
+  .qualifier-no .qualifier-list li::before{content:"×";position:absolute;left:0;color:var(--crema-dim);font-weight:700;}
+  @media (max-width:768px){.qualifier-grid{grid-template-columns:1fr;}}
+  .service-card{
+    background:var(--ink);padding:40px 36px;
+    transition:background .3s ease, transform .3s ease;
+    position:relative;
+  }
+  .service-card:hover{ background:var(--ink-raise); transform:translateY(-4px); }
+  .service-card:hover .service-num{color:var(--terracota);text-shadow:0 0 16px rgba(193,80,46,0.6);}
+  .service-num{font-family:'Fraunces',serif;font-size:0.9rem;color:var(--ambar);margin-bottom:16px;transition:all .3s ease;}
+  .service-card h3{font-size:1.32rem;margin-bottom:10px;color:var(--crema);}
+  .service-card p{color:var(--crema-dim);font-size:0.95rem;}
+
+  /* FLIP CARDS (servicios) */
+  .flip-outer{perspective:1400px;}
+  .flip-card{
+    position:relative;width:100%;min-height:340px;
+    transition:transform .7s cubic-bezier(.4,.2,.2,1);
+    transform-style:preserve-3d;
+  }
+  .flip-card.flipped{transform:rotateY(180deg);}
+  @media (hover:hover){
+    .flip-card:hover{transform:rotateY(180deg);}
+  }
+  .flip-face{
+    position:absolute;inset:0;backface-visibility:hidden;
+    padding:34px 32px;display:flex;flex-direction:column;
+  }
+  .flip-front{background:var(--ink);}
+  .flip-back{ background:var(--ink-raise); transform:rotateY(180deg); justify-content:space-between; }
+  .flip-front p, .flip-back .price-note{ font-size:0.9rem; line-height:1.45; }
+  .flip-hint{ margin-top:auto;font-size:0.78rem;color:var(--crema-dim); opacity:0.7; }
+  .price-tag{font-family:'Fraunces',serif;}
+  .price-old{ font-size:0.95rem;color:var(--crema-dim);text-decoration:line-through;opacity:0.6; }
+  .price-new{ font-size:1.7rem;color:var(--ambar);display:block;margin:4px 0 12px; }
+  .price-note{font-size:0.82rem;color:var(--crema-dim);margin-bottom:20px;}
+  .btn-mini{
+    display:inline-block;align-self:flex-start;
+    background:linear-gradient(135deg, var(--terracota), var(--ambar));
+    color:var(--ink-deep);font-weight:700;font-size:0.85rem;
+    padding:10px 20px;border-radius:100px;text-decoration:none;
+    transition:transform .2s ease;
+  }
+  .btn-mini:hover{transform:translateY(-2px);}
+
+  /* PRICING TOGGLE */
+  .pricing-toggle{
+    display:flex;align-items:center;justify-content:center;gap:16px;
+    margin:32px 0 4px;flex-wrap:wrap;
+  }
+  .toggle-label{font-size:0.92rem;color:var(--crema-dim);font-weight:600;transition:color .3s ease;}
+  .toggle-label.active{color:var(--crema);}
+  .toggle-badge{
+    background:linear-gradient(135deg, var(--terracota), var(--ambar));
+    color:var(--ink-deep);font-size:0.72rem;font-weight:700;
+    padding:3px 10px;border-radius:100px;margin-left:8px;
+    box-shadow:0 0 10px 1px rgba(232,169,76,0.4);
+  }
+  .toggle-switch{
+    position:relative;width:58px;height:32px;border-radius:100px;
+    background:var(--ink-raise);border:1px solid var(--line);padding:0;cursor:pointer;
+    transition:box-shadow .3s ease, background .3s ease;
+  }
+  .toggle-switch.on{
+    background:linear-gradient(135deg, var(--terracota), var(--ambar));
+    box-shadow:0 0 22px 3px rgba(232,169,76,0.55);
+    border-color:transparent;
+  }
+  .toggle-knob{
+    position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;
+    background:var(--crema);box-shadow:0 2px 6px rgba(0,0,0,0.35);
+    transition:transform .3s cubic-bezier(.4,.2,.2,1);
+  }
+  .toggle-switch.on .toggle-knob{transform:translateX(26px);}
+
+  /* SERVICIOS — tarjetas de vista previa */
+  .service-preview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;}
+  .service-preview{background:var(--ink);padding:32px 26px;cursor:pointer;transition:background .3s ease, transform .3s ease;}
+  .service-preview:hover{background:var(--ink-raise);transform:translateY(-4px);}
+  .service-preview:hover .service-num{color:var(--terracota);text-shadow:0 0 16px rgba(193,80,46,0.6);}
+  .service-preview h3{font-size:1.1rem;margin-bottom:8px;color:var(--crema);}
+  .service-preview p{color:var(--crema-dim);font-size:0.86rem;margin-bottom:16px;}
+  .preview-price{font-family:'Fraunces',serif;color:var(--ambar);font-size:1.05rem;display:block;}
+  .preview-hint{margin-top:14px;font-size:0.76rem;color:var(--crema-dim);opacity:0.75;}
+  @media(max-width:900px){.service-preview-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:640px){.service-preview-grid{grid-template-columns:1fr;}}
+
+  /* MODALES DE SERVICIO — "a modo página" */
+  .service-modal-overlay{
+    position:fixed;inset:0;z-index:60;
+    background:rgba(16,12,10,0.78);backdrop-filter:blur(6px);
+    display:flex;align-items:flex-start;justify-content:center;
+    padding:64px 24px;overflow-y:auto;
+    opacity:0;visibility:hidden;transition:opacity .3s ease, visibility .3s ease;
+  }
+  .service-modal-overlay.open{opacity:1;visibility:visible;}
+  .service-modal{
+    background:var(--ink-raise);border:1px solid var(--line);border-radius:24px;
+    padding:52px;max-width:920px;width:100%;position:relative;
+    box-shadow:0 40px 80px rgba(0,0,0,0.5);
+    transform:translateY(20px) scale(0.98);transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .service-modal-overlay.open .service-modal{transform:translateY(0) scale(1);}
+  .service-modal h2{font-size:clamp(1.6rem,3vw,2.1rem);margin:8px 0 14px;max-width:26ch;}
+  .modal-lead{color:var(--crema-dim);font-size:1rem;max-width:60ch;margin-bottom:8px;}
+  .modal-close{
+    position:absolute;top:24px;right:24px;width:38px;height:38px;border-radius:50%;
+    background:transparent;border:1px solid var(--line);color:var(--crema);
+    font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .modal-close:hover{border-color:var(--ambar);background:rgba(232,169,76,0.1);}
+  .modal-footer-link{display:inline-block;margin-top:28px;font-size:0.9rem;color:var(--ambar);text-decoration:underline;text-underline-offset:3px;}
+
+  /* CTA AUDITORÍA GRATIS */
+  .audit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;}
+  .audit-box{
+    padding:30px 26px; background:var(--ink);
+  }
+  .audit-badge{
+    display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.04em;
+    text-transform:uppercase; color:var(--ink); background:var(--ambar);
+    padding:3px 10px; border-radius:100px; margin-bottom:10px;
+  }
+  .audit-box h4{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--crema);margin-bottom:8px;}
+  .audit-box p{color:var(--crema-dim);font-size:0.88rem;margin-bottom:18px;}
+  .audit-form{display:flex;flex-direction:column;gap:10px;}
+  .audit-form input{
+    background:var(--ink-raise); border:1px solid var(--line); border-radius:100px;
+    padding:11px 18px; color:var(--crema); font-family:inherit; font-size:0.9rem; width:100%;
+  }
+  .audit-form input:focus{outline:none;border-color:var(--ambar);}
+  .audit-form button{
+    background:var(--terracota); color:var(--crema); border:none;
+    padding:11px 22px; border-radius:100px; font-family:'Inter',sans-serif; font-weight:600;
+    font-size:0.87rem; cursor:pointer; transition:background .2s ease, transform .2s ease; width:100%;
+  }
+  .audit-form button:hover{background:#a8441f;transform:translateY(-1px);}
+  .audit-form button.sent{background:#5c7a52;}
+  @media(max-width:900px){.audit-grid{grid-template-columns:1fr;}}
+  .mini-config-btn{display:block;margin-top:20px;padding:12px 22px;border-radius:100px;border:1px dashed var(--ambar);background:transparent;color:var(--ambar);font-size:0.85rem;font-weight:600;cursor:pointer;transition:background .2s ease;}
+  .mini-config-btn:hover{background:rgba(232,169,76,0.1);}
+
+  /* ===== CONFIGURADOR INCRUSTADO ("Haz tu Kairea ideal") ===== */
+  .configurator-layout{display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start;margin-top:32px;}
+  @media(max-width:980px){.configurator-layout{grid-template-columns:1fr;}}
+
+  .service-toggle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:8px;}
+  @media(max-width:760px){.service-toggle-grid{grid-template-columns:repeat(2,1fr);}}
+  .service-toggle{background:var(--ink);border:1px solid var(--line);border-radius:16px;padding:20px 16px;text-align:left;transition:border-color .25s ease, background .25s ease, transform .2s ease;}
+  .service-toggle:hover{transform:translateY(-2px);}
+  .service-toggle.on{border-color:var(--terracota);background:linear-gradient(160deg, rgba(193,80,46,0.16), var(--ink) 60%);box-shadow:0 0 0 1px var(--terracota);}
+  .service-toggle .st-check{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line);margin-bottom:14px;position:relative;transition:all .2s ease;}
+  .service-toggle.on .st-check{background:linear-gradient(135deg,var(--terracota),var(--ambar));border-color:transparent;}
+  .service-toggle.on .st-check::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--ink-deep);font-weight:800;}
+  .service-toggle h3{font-size:1rem;margin-bottom:4px;}
+  .service-toggle p{font-size:0.8rem;color:var(--crema-dim);}
+
+  .config-panel{display:none;background:var(--ink);border:1px solid var(--line);border-radius:20px;padding:28px 26px;margin-top:16px;}
+  .config-panel.show{display:block;animation:panelIn .35s ease;}
+  @keyframes panelIn{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+  .config-panel h4{font-size:1.1rem;margin-bottom:4px;}
+  .config-sub{color:var(--crema-dim);font-size:0.86rem;margin-bottom:22px;}
+
+  .mode-tabs{display:flex;gap:6px;background:var(--ink-deep);border:1px solid var(--line);border-radius:100px;padding:5px;margin-bottom:24px;}
+  .mode-tab{flex:1;text-align:center;padding:10px 10px;border-radius:100px;font-size:0.8rem;font-weight:600;color:var(--crema-dim);border:none;background:transparent;transition:all .2s ease;}
+  .mode-tab.on{background:linear-gradient(135deg,var(--terracota),var(--ambar));color:var(--ink-deep);}
+
+  .slider-block{margin-bottom:24px;}
+  .slider-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;}
+  .slider-top .tier-name{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--ambar);}
+  .slider-top .tier-price{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--crema);}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:100px;outline:none;border:1px solid var(--line);cursor:pointer;background:var(--ink-deep);}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--terracota),var(--ambar));border:2px solid var(--ink-raise);box-shadow:0 2px 8px rgba(0,0,0,0.4);cursor:pointer;}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--terracota),var(--ambar));border:2px solid var(--ink-raise);cursor:pointer;}
+  input[type=range]::-moz-range-track{background:transparent;height:6px;border-radius:100px;}
+  .slider-scale{display:flex;justify-content:space-between;margin-top:8px;font-size:0.72rem;color:var(--crema-dim);opacity:0.75;}
+  .tier-includes{margin-top:14px;font-size:0.83rem;color:var(--crema-dim);}
+
+  /* toggle mensual/anual propio del configurador (evita chocar con el de Redes/SEO de fuera) */
+  .cfg-pricing-toggle{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .cfg-toggle-label{font-size:0.85rem;color:var(--crema-dim);font-weight:600;transition:color .3s ease;}
+  .cfg-toggle-label.active{color:var(--crema);}
+  .cfg-toggle-badge{background:linear-gradient(135deg,var(--terracota),var(--ambar));color:var(--ink-deep);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:100px;margin-left:6px;}
+  .cfg-toggle-switch{position:relative;width:50px;height:28px;border-radius:100px;background:var(--ink-deep);border:1px solid var(--line);padding:0;transition:background .3s ease;}
+  .cfg-toggle-switch.on{background:linear-gradient(135deg,var(--terracota),var(--ambar));border-color:transparent;}
+  .cfg-toggle-knob{position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;background:var(--crema);transition:transform .3s cubic-bezier(.4,.2,.2,1);}
+  .cfg-toggle-switch.on .cfg-toggle-knob{transform:translateX(22px);}
+
+  .option-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media(max-width:640px){.option-grid{grid-template-columns:1fr;}}
+  .option-card{background:var(--ink-deep);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:left;transition:border-color .2s ease, transform .2s ease;}
+  .option-card:hover{transform:translateY(-2px);}
+  .option-card.on{border-color:var(--ambar);box-shadow:0 0 0 1px var(--ambar);}
+  .option-card .opt-name{font-size:0.92rem;color:var(--crema);margin-bottom:6px;font-weight:600;}
+  .option-card .opt-price{font-family:'Fraunces',serif;color:var(--ambar);font-size:1.25rem;}
+  .option-card .opt-note{font-size:0.76rem;color:var(--crema-dim);margin-top:4px;}
+
+  .checklist{display:flex;flex-direction:column;gap:2px;}
+  .check-row{display:flex;align-items:center;gap:12px;padding:13px 4px;border-top:1px solid var(--line);}
+  .check-row:first-child{border-top:none;}
+  .check-row input[type=checkbox]{accent-color:var(--terracota);width:18px;height:18px;flex-shrink:0;}
+  .check-row label{flex-grow:1;font-size:0.9rem;color:var(--crema);cursor:pointer;}
+  .check-row .row-price{font-family:'Fraunces',serif;color:var(--ambar);font-size:0.96rem;white-space:nowrap;}
+  .check-row.disabled{opacity:0.4;}
+  .check-row.disabled label{cursor:not-allowed;}
+  .featured-row{background:linear-gradient(160deg, rgba(193,80,46,0.14), transparent);border-radius:12px;margin:4px 0;padding:16px 12px;}
+
+  .stepper{display:flex;align-items:center;gap:10px;margin-top:10px;margin-left:30px;}
+  .step-btn{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--ink-deep);color:var(--crema);font-size:1.1rem;line-height:1;}
+  .step-btn:hover{border-color:var(--ambar);}
+  .stepper .step-val{font-family:'Fraunces',serif;color:var(--crema);min-width:2.5ch;text-align:center;}
+
+  .addon-note{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);}
+
+  .summary-panel{background:var(--ink);border:1px solid var(--line);border-radius:20px;padding:26px;position:sticky;top:96px;}
+  @media(max-width:980px){.summary-panel{position:static;}}
+  .summary-panel h3{font-size:1.15rem;margin-bottom:4px;}
+  .summary-empty{color:var(--crema-dim);font-size:0.86rem;margin-top:14px;}
+  .summary-list{margin:16px 0;display:flex;flex-direction:column;gap:12px;}
+  .summary-item{display:flex;justify-content:space-between;gap:10px;font-size:0.84rem;border-bottom:1px solid var(--line);padding-bottom:12px;}
+  .summary-item .si-label{color:var(--crema-dim);}
+  .summary-item .si-price{color:var(--ambar);font-family:'Fraunces',serif;white-space:nowrap;}
+  .summary-totals{border-top:1px solid var(--line);padding-top:16px;margin-top:4px;}
+  .summary-total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+  .summary-total-row .st-label{font-size:0.85rem;color:var(--crema-dim);}
+  .summary-total-row .st-val{font-family:'Fraunces',serif;font-size:1.35rem;color:var(--crema);}
+  .summary-cta{display:block;text-align:center;margin-top:20px;background:linear-gradient(135deg,var(--terracota),var(--ambar));color:var(--ink-deep);padding:15px;border-radius:100px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:transform .2s ease;}
+  .summary-cta:hover{transform:translateY(-2px);}
+  .summary-cta.disabled{opacity:0.4;pointer-events:none;}
+  .summary-fine{font-size:0.74rem;color:var(--crema-dim);opacity:0.75;text-align:center;margin-top:12px;}
+
+  .floating-total{position:fixed;bottom:22px;right:22px;z-index:65;background:linear-gradient(135deg,var(--terracota),var(--ambar));color:var(--ink-deep);padding:13px 22px;border-radius:100px;font-weight:700;font-size:0.85rem;box-shadow:0 10px 28px rgba(193,80,46,0.4);display:none;align-items:center;gap:8px;border:none;}
+  .floating-total.show{display:flex;}
+  @media(max-width:980px){.floating-total{display:none !important;}}
+
+  .modal-tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;}
+  .tier-card{background:var(--ink);border:1px solid var(--line);border-radius:16px;padding:26px 22px;display:flex;flex-direction:column;}
+  .tier-card .price-old{font-size:0.85rem;color:var(--crema-dim);text-decoration:line-through;opacity:0.6;display:none;}
+  .tier-card .price-new{font-size:1.5rem;color:var(--ambar);display:block;margin:4px 0 6px;font-family:'Fraunces',serif;}
+  .tier-note{font-size:0.78rem;color:var(--crema-dim);margin-bottom:16px;}
+  .tier-list{list-style:none;margin-bottom:20px;flex-grow:1;}
+  .tier-list li{font-size:0.86rem;color:var(--crema-dim);padding:6px 0;border-top:1px solid var(--line);}
+  .tier-list li:first-child{border-top:none;}
+  @media(max-width:760px){.modal-tier-grid{grid-template-columns:1fr;}}
+
+  /* Reutilizado de la página de diseño gráfico */
+  .featured-card{position:relative;border-radius:22px;padding:2px;background:linear-gradient(135deg, var(--terracota), var(--ambar));margin-top:24px;}
+  .featured-card-inner{background:var(--ink-raise);border-radius:20px;padding:36px;display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;align-items:center;}
+  .featured-badge{display:inline-block;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-deep);background:linear-gradient(135deg, var(--ambar), var(--terracota));padding:5px 14px;border-radius:100px;margin-bottom:14px;}
+  .featured-card-inner h3{font-size:1.3rem;margin-bottom:8px;color:var(--crema);max-width:26ch;}
+  .featured-card-inner p{color:var(--crema-dim);font-size:0.92rem;max-width:40ch;}
+  .featured-price-block{text-align:right;flex-shrink:0;}
+  .featured-price{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--ambar);line-height:1;margin-bottom:12px;}
+  .work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:20px;}
+  .work-card{background:var(--ink);padding:22px 20px;}
+  .work-card h3{font-size:0.95rem;margin:2px 0 6px;color:var(--crema);}
+  .work-price{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--ambar);}
+  @media(max-width:760px){.featured-card-inner{flex-direction:column;align-items:flex-start;text-align:left;}.featured-price-block{text-align:left;}.work-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:640px){.service-modal{padding:34px 24px;}.work-grid{grid-template-columns:1fr;}}
+
+  .faq-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;}
+  .faq-item{background:var(--ink-raise);padding:28px 30px;}
+  .faq-item h3{font-size:1.05rem;margin-bottom:10px;}
+  .faq-item p{font-size:0.92rem;color:var(--crema-dim);line-height:1.55;}
+  @media (max-width:768px){.faq-list{grid-template-columns:1fr;}}
+  .process-list{display:flex;flex-direction:column;}
+  .process-item{
+    display:grid;grid-template-columns:90px 1fr;gap:24px;
+    padding:32px 0;border-top:1px solid var(--line);
+    transition:padding-left .3s ease;
+  }
+  .process-item:hover{padding-left:10px;}
+  .process-item:first-child{border-top:none;}
+  .process-step{
+    font-family:'Fraunces',serif;font-size:1.7rem;
+    background:linear-gradient(135deg, var(--terracota), var(--ambar));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .process-item h3{font-size:1.18rem;margin-bottom:6px;color:var(--crema);}
+  .process-item p{color:var(--crema-dim);font-size:0.95rem;max-width:52ch;}
+
+  .about-box{
+    background:var(--ink-raise);
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:50px;
+    position:relative;
+    overflow:hidden;
+  }
+  .about-box::after{
+    content:"";position:absolute;top:-40%;right:-15%;width:60%;height:180%;
+    background:radial-gradient(circle, rgba(193,80,46,0.18), transparent 65%);
+    pointer-events:none;
+  }
+  .about-box p{color:var(--crema-dim);font-size:1.06rem;max-width:62ch;position:relative;}
+  .about-box p + p{margin-top:16px;}
+
+  .cta-final{text-align:center;padding:130px 0;position:relative;overflow:hidden;}
+  .cta-final h2{font-size:clamp(2.1rem,4.2vw,3.2rem);max-width:16ch;margin:0 auto 20px;position:relative;z-index:2;}
+  .cta-final p{color:var(--crema-dim);margin-bottom:40px;position:relative;z-index:2;}
+  .burst-ring{
+    position:absolute;top:50%;left:50%;
+    width:60px;height:60px;margin:-30px 0 0 -30px;
+    border-radius:50%;border:1px solid var(--terracota);
+    opacity:0;z-index:1;
+  }
+  .cta-final.burst .burst-ring{ animation:ringOut 1.8s ease-out forwards; }
+  .cta-final.burst .burst-ring.r2{ animation-delay:.25s; border-color:var(--ambar);}
+  .cta-final.burst .burst-ring.r3{ animation-delay:.5s; }
+  @keyframes ringOut{
+    0%{opacity:0.7;transform:scale(0.3);}
+    100%{opacity:0;transform:scale(9);}
+  }
+
+  footer{ border-top:1px solid var(--line); padding:38px 0; text-align:center; color:var(--crema-dim); font-size:0.85rem; position:relative;z-index:3; }
+  .footer-inner{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .footer-brand{font-family:'Fraunces',serif;color:var(--crema-dim);}
+  .footer-contact a,.footer-links a{color:var(--crema-dim);text-decoration:underline;text-underline-offset:3px;transition:color .2s ease;}
+  .footer-contact a:hover,.footer-links a:hover{color:var(--ambar);}
+  .footer-dot{opacity:0.5;margin:0 2px;}
+
+  /* AVISO DE COOKIES */
+  .cookie-banner{
+    position:fixed; left:0; right:0; bottom:0; z-index:100;
+    background:var(--ink-raise, #241A16);
+    border-top:1px solid var(--line);
+    box-shadow:0 -8px 28px rgba(0,0,0,0.35);
+    padding:20px 24px;
+    transform:translateY(120%);
+    transition:transform .5s cubic-bezier(.16,1,.3,1);
+  }
+  .cookie-banner.show{transform:translateY(0);}
+  .cookie-banner-inner{
+    max-width:1040px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .cookie-text{color:var(--crema-dim); font-size:0.9rem; line-height:1.55; max-width:640px;}
+  .cookie-text strong{color:var(--crema);}
+  .cookie-text a{color:var(--ambar); text-decoration:underline; text-underline-offset:3px;}
+  .cookie-actions{display:flex; align-items:center; gap:14px; flex-shrink:0;}
+  .cookie-btn-accept{
+    background:var(--terracota); color:var(--crema); border:none;
+    padding:11px 24px; border-radius:999px; font-family:'Inter',sans-serif; font-weight:600;
+    font-size:0.9rem; cursor:pointer; transition:background .2s ease, transform .2s ease;
+    white-space:nowrap;
+  }
+  .cookie-btn-accept:hover{background:#a8441f; transform:translateY(-1px);}
+  @media (max-width:640px){
+    .cookie-banner{padding:18px 18px 20px;}
+    .cookie-banner-inner{flex-direction:column; align-items:stretch; gap:16px;}
+    .cookie-actions{justify-content:flex-end;}
+  }
+
+  /* FORMULARIO DE CONTACTO */
+  /* CHAT ESTILO WHATSAPP */
+  .wa-chat{background:var(--ink-raise);border:1px solid var(--line);border-radius:22px;max-width:480px;margin:0 auto;overflow:hidden;}
+  .wa-chat-header{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line);}
+  .wa-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--terracota),var(--ambar));display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;color:var(--ink-deep);flex-shrink:0;}
+  .wa-chat-name{font-weight:600;font-size:0.95rem;color:var(--crema);}
+  .wa-chat-status{font-size:0.78rem;color:var(--crema-dim);display:flex;align-items:center;gap:6px;margin-top:2px;}
+  .wa-dot{width:7px;height:7px;border-radius:50%;background:#4ADE80;display:inline-block;}
+  .wa-chat-body{padding:20px;display:flex;flex-direction:column;gap:10px;min-height:70px;max-height:260px;overflow-y:auto;}
+  .wa-bubble{max-width:82%;padding:10px 14px;border-radius:16px;font-size:0.88rem;line-height:1.4;}
+  .wa-bubble.wa-in{background:var(--ink);color:var(--crema-dim);align-self:flex-start;border-bottom-left-radius:4px;}
+  .wa-bubble.wa-out{background:linear-gradient(135deg,var(--terracota),var(--ambar));color:var(--ink-deep);align-self:flex-end;border-bottom-right-radius:4px;font-weight:500;}
+  .wa-chat-input{display:flex;gap:10px;padding:14px 16px;border-top:1px solid var(--line);}
+  .wa-chat-input input{flex-grow:1;background:var(--ink);border:1px solid var(--line);border-radius:100px;padding:11px 16px;color:var(--crema);font-family:inherit;font-size:0.9rem;}
+  .wa-chat-input input:focus{outline:none;border-color:var(--ambar);}
+  .wa-chat-input button{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--terracota),var(--ambar));border:none;color:var(--ink-deep);font-size:1.1rem;flex-shrink:0;cursor:pointer;transition:transform .2s ease;}
+  .wa-chat-input button:hover{transform:scale(1.06);}
+  @media(max-width:640px){.wa-chat{max-width:100%;}}
+  .wa-chat.wa-chat-small{max-width:380px;}
+  .wa-chat.wa-chat-small .wa-avatar{width:30px;height:30px;font-size:0.85rem;}
+  .wa-chat.wa-chat-small .wa-chat-name{font-size:0.85rem;}
+  .wa-chat.wa-chat-small .wa-chat-status{font-size:0.7rem;}
+  .wa-chat.wa-chat-small .wa-chat-header{padding:12px 16px;}
+  .wa-chat.wa-chat-small .wa-chat-body{padding:14px 16px;min-height:36px;}
+  .wa-chat.wa-chat-small .wa-bubble{font-size:0.8rem;padding:8px 12px;}
+  .wa-chat.wa-chat-small .wa-chat-input{padding:10px 12px;}
+  .wa-chat.wa-chat-small .wa-chat-input input{padding:9px 14px;font-size:0.85rem;}
+  .wa-chat.wa-chat-small .wa-chat-input button{width:36px;height:36px;font-size:0.95rem;}
+
+  .contact-box{background:var(--ink-raise);border:1px solid var(--line);border-radius:22px;padding:44px;position:relative;overflow:hidden;text-align:left;max-width:640px;margin:0 auto;}
+  .cta-alt{margin-top:36px;}
+  .or-divider{color:var(--crema-dim);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;}
+  .contact-form{display:flex;flex-direction:column;gap:18px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .form-field{display:flex;flex-direction:column;gap:6px;}
+  .form-field label{font-size:0.82rem;color:var(--crema-dim);font-weight:600;}
+  .form-field input, .form-field select, .form-field textarea{
+    background:var(--ink);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;color:var(--crema);font-family:'Inter',sans-serif;font-size:0.95rem;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus{
+    outline:none;border-color:var(--ambar);box-shadow:0 0 0 3px rgba(232,169,76,0.15);
+  }
+  .form-field textarea{resize:vertical;min-height:100px;font-family:inherit;}
+  .contact-form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9BFB0' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
+  .botcheck{position:absolute;left:-9999px;top:-9999px;}
+  .contact-form .btn-primary{align-self:flex-start;border:none;font-family:inherit;cursor:pointer;}
+  .contact-form .btn-primary:disabled{opacity:0.6;cursor:not-allowed;transform:none !important;}
+  .optional-tag{opacity:0.6;font-weight:400;text-transform:none;letter-spacing:0;}
+  .form-fineprint{color:var(--crema-dim);font-size:0.78rem;opacity:0.75;margin:-6px 0 0;}
+  .form-error{color:#e8815a;font-size:0.85rem;min-height:1.2em;margin:0;}
+  .contact-success{display:none;text-align:center;padding:24px 0;}
+  .contact-success.show{display:block;}
+  .contact-form.hide{display:none;}
+  .success-dot{width:14px;height:14px;border-radius:50%;background:var(--terracota);margin:0 auto 18px;box-shadow:0 0 20px 4px rgba(193,80,46,0.5);}
+  .contact-success h3{font-size:1.7rem;margin-bottom:10px;}
+  .contact-success p{color:var(--crema-dim);}
+  @media(max-width:640px){
+    .form-row{grid-template-columns:1fr;}
+    .contact-box{padding:30px 24px;}
+  }
+
+  /* BOLA BRILLANTE QUE REBOTA */
+  .bounce-ball{
+    position:fixed;top:0;left:0;width:64px;height:64px;border-radius:50%;
+    background:radial-gradient(circle at 30% 25%, #ffdca8, var(--ambar) 40%, var(--terracota) 82%);
+    box-shadow:0 0 26px 5px rgba(193,80,46,0.5), inset -6px -6px 12px rgba(16,12,10,0.35), inset 4px 4px 10px rgba(255,255,255,0.4);
+    z-index:32;pointer-events:none;will-change:transform;
+    animation:ballShine 3s ease-in-out infinite;
+  }
+  @keyframes ballShine{
+    0%,100%{box-shadow:0 0 26px 5px rgba(193,80,46,0.5), inset -6px -6px 12px rgba(16,12,10,0.35), inset 4px 4px 10px rgba(255,255,255,0.4);}
+    50%{box-shadow:0 0 38px 9px rgba(232,169,76,0.65), inset -6px -6px 12px rgba(16,12,10,0.3), inset 4px 4px 10px rgba(255,255,255,0.55);}
+  }
+  .logo-droplet{
+    position:fixed;left:0;top:0;pointer-events:none;z-index:34;
+    font-family:'Fraunces',serif;font-weight:700;font-size:14px;color:#0c0906;
+    display:flex;align-items:flex-start;line-height:1;
+  }
+  .logo-droplet .d{width:3px;height:3px;border-radius:50%;background:var(--terracota);margin:1px 0 0 1px;}
+
+  @media(max-width:640px){
+    .services-grid{grid-template-columns:1fr;}
+    .hero{padding:90px 0 70px;}
+    .about-box{padding:34px;}
+    .ticker-track span, .trust-track span{padding:10px 16px;font-size:0.75rem;}
+    .bounce-ball{width:50px;height:50px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .hero-glow{animation:none;}
+    .eyebrow::before{animation:none;}
+    h1{animation:none;background-position:0 center;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .ticker-track, .trust-track{animation:none;}
+    #drops{display:none;}
+    .bounce-ball{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<canvas id="drops"></canvas>
+
+<nav>
+  <div class="wrap">
+    <img class="logo-img" src="data:image/png;base64,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" alt="Kairea">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a class="nav-cta config-open-btn" href="#" style="background:transparent;border:1px solid var(--ambar);color:var(--ambar);">Haz tu Kairea</a>
+      <a class="nav-cta" href="https://wa.me/34624344097?text=Hola%2C%20quiero%20contarte%20mi%20proyecto" target="_blank" rel="noopener">Hablemos</a>
+    </div>
+  </div>
+</nav>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Gestión de redes sociales</span><span>SEO</span><span>Landing pages</span>
+    <span>Gestión de redes sociales</span><span>SEO</span><span>Landing pages</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div class="eyebrow">Estudio creativo</div>
+    <h1>El momento de moverte es ahora.</h1>
+    <p class="hero-sub">No somos la enésima agencia que promete "resultados brutales" y desaparece en un grupo de WhatsApp sin leer. Un estudio, no una fábrica de proyectos.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="https://wa.me/34624344097?text=Hola%2C%20quiero%20contarte%20mi%20proyecto" target="_blank" rel="noopener">Cuéntame tu proyecto</a>
+      <button type="button" class="btn-ghost config-open-btn" style="border-color:var(--ambar);color:var(--ambar);background:transparent;">Haz tu Kairea</button>
+    </div>
+    <p style="margin-top:20px;font-size:0.85rem;color:var(--crema-dim);opacity:0.8;">Sin compromiso · Diagnóstico gratuito · Respuesta directa, sin bots · Capacidad limitada a propósito — no aceptamos todo lo que llega</p>
+    <a href="#servicios" style="display:inline-block;margin-top:14px;font-size:0.85rem;color:var(--crema-dim);text-decoration:underline;text-underline-offset:3px;">Ver servicios y precios ↓</a>
+  </div>
+</header>
+
+<div class="stat-strip">
+  <div class="wrap">
+    <div class="stat-num">+10 años</div>
+    <div class="stat-label">en el sector, trabajando para empresas y viendo desde dentro cómo se trata al cliente. Por eso decidimos hacerlo distinto con Kairea.</div>
+  </div>
+</div>
+
+<div class="logos-band" aria-label="Marcas con las que hemos trabajado">
+  <div class="logos-track">
+    <span class="logo-name">Hermanos Zubiri</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Afvocats ST</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Together Sports</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Hermanos Zubiri</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Afvocats ST</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Together Sports</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Hermanos Zubiri</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Afvocats ST</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Together Sports</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Hermanos Zubiri</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Afvocats ST</span>
+    <span class="logo-dot">✦</span>
+    <span class="logo-name">Together Sports</span>
+    <span class="logo-dot">✦</span>
+  </div>
+</div>
+
+<section id="para-quien">
+  <div class="wrap">
+    <div class="qualifier-grid reveal">
+      <div class="qualifier-col qualifier-yes">
+        <div class="section-label" style="color:var(--ambar);">Esto es para ti si...</div>
+        <ul class="qualifier-list">
+          <li>Eres autónomo o tienes un negocio pequeño (2-10 personas) y quieres que alguien se implique de verdad, no que gestione tu cuenta entre otras cincuenta.</li>
+          <li>Ya probaste una agencia o el Kit Digital y te quedaste con una web plantilla y un gestor que no sabía ni a qué te dedicabas.</li>
+          <li>Prefieres un precio cerrado y un plazo real antes de empezar, no sorpresas a mitad de proyecto.</li>
+        </ul>
+      </div>
+      <div class="qualifier-col qualifier-no">
+        <div class="section-label">Esto no es para ti si...</div>
+        <ul class="qualifier-list">
+          <li>Buscas la opción más barata del mercado, sin más.</li>
+          <li>Necesitas una tienda online grande o un desarrollo a medida complejo — eso no lo hacemos.</li>
+          <li>Quieres cien piezas de contenido genérico esta semana, sin criterio detrás.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="por-que">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-label">Por qué existimos</div>
+      <h2>Odiamos cómo se vende esto.</h2>
+      <p style="color:var(--crema-dim);margin-top:18px;font-size:1.05rem;">El Kit Digital iba a ayudar a negocios como el tuyo a digitalizarse. Para muchos, lo que hizo fue convertirlos en un número más en una lista: una web plantilla sacada del mismo catálogo que la de tu competencia, contenido genérico copiado y pegado entre clientes, y un gestor que cambiaba cada dos meses sin saber a qué te dedicabas. Y no es solo el Kit Digital — llevamos años viendo por dentro cómo estructuras enormes subcontratan el trabajo real a una sola persona y luego lo venden como propio, cobrando la diferencia. Nos cansamos de las dos farsas. Aquí no cogemos cien proyectos para repartir entre quien esté libre esa semana. Buscamos a los pocos que entienden que el juego ha cambiado.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Capacidad limitada</h3>
+        <p>No aceptamos todos los proyectos que llegan, solo los que podemos cuidar de verdad. Menos clientes, más implicación en cada uno.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>No eres un número</h3>
+        <p>Tu proyecto lo lleva una sola persona de principio a fin. Sabe quién eres, qué necesitas y por qué lo necesitas.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>No somos tu proveedor</h3>
+        <p>Trabajamos contigo, no para ti. Nos implicamos con tu marca como si fuera nuestra, no como un encargo más en la lista.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-label">Servicios</div>
+      <h2>Todo lo que necesita tu marca para moverse online.</h2>
+      <p style="color:var(--crema-dim);margin-top:14px;font-size:0.9rem;">Pasa el ratón sobre cada servicio (o tócalo en el móvil) para ver los planes completos, como si fuera su propia página.</p>
+    </div>
+    <div class="service-preview-grid reveal">
+      <div class="service-preview" data-service="redes">
+        <div class="service-num">Redes</div>
+        <h3>Diseño y gestión de redes sociales</h3>
+        <p>Contenido con criterio, no publicar por publicar. Cada post con un porqué.</p>
+        <span class="preview-price">Desde 89€/mes</span>
+        <div class="preview-hint">Ver planes ↗</div>
+      </div>
+      <div class="service-preview" data-service="web">
+        <div class="service-num">Web</div>
+        <h3>Desarrollo web</h3>
+        <p>Landing, web básica o web completa. Sin plantillas ni WordPress.</p>
+        <span class="preview-price">Desde 450€</span>
+        <div class="preview-hint">Ver detalles ↗</div>
+      </div>
+      <div class="service-preview" data-service="seo">
+        <div class="service-num">SEO</div>
+        <h3>SEO / gestión de blog</h3>
+        <p>Para quien ya tiene web propia y quiere posicionar entradas de blog.</p>
+        <span class="preview-price">Desde 77€/mes</span>
+        <div class="preview-hint">Ver planes ↗</div>
+      </div>
+      <div class="service-preview" data-service="diseno">
+        <div class="service-num">Diseño gráfico</div>
+        <h3>Identidad de marca</h3>
+        <p>Logo, manual de marca, papelería — el sistema completo, no piezas sueltas.</p>
+        <span class="preview-price">Desde 90€</span>
+        <div class="preview-hint">Ver tipos de trabajo ↗</div>
+      </div>
+    </div>
+
+    <div class="wa-chat wa-chat-small reveal" style="margin-top:44px;">
+      <div class="wa-chat-header">
+        <div class="wa-avatar">k</div>
+        <div>
+          <div class="wa-chat-name">Kairea</div>
+          <div class="wa-chat-status"><span class="wa-dot"></span> Suele responder rápido</div>
+        </div>
+      </div>
+      <div class="wa-chat-body">
+        <div class="wa-bubble wa-in">¿Ya sabes qué necesitas? Escríbelo aquí.</div>
+      </div>
+      <form class="wa-chat-input">
+        <input type="text" placeholder="Escribe tu mensaje..." autocomplete="off" required>
+        <button type="submit" aria-label="Enviar por WhatsApp">➤</button>
+      </form>
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:36px;">
+      <button type="button" class="btn-primary config-open-btn" id="openConfigBtn" style="border:none;">Haz tu propio Kairea</button>
+      <p style="margin-top:14px;font-size:0.85rem;color:var(--crema-dim);">Elige tú la combinación exacta — publicaciones sueltas, reels, plantillas o gestión completa. El precio se ajusta al momento, delante de ti.</p>
+    </div>
+  </div>
+</section>
+
+<section id="auditoria">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="audit-badge">Gratis</span>
+      <h2 style="margin-top:12px;">¿No sabes si merece la pena? Empieza gratis.</h2>
+      <p style="color:var(--crema-dim);margin-top:14px;font-size:0.95rem;">Pásame tu dato y en 48h te digo qué está fallando y qué haría diferente — sin compromiso, sin letra pequeña. Así vemos si encajamos antes de que muevas un euro.</p>
+    </div>
+    <div class="audit-grid reveal">
+      <div class="audit-box">
+        <h4>Redes sociales</h4>
+        <p>Pásame tu usuario de Instagram y te digo qué le falta a tu contenido.</p>
+        <form class="audit-form" data-service="Redes sociales" data-template="Hola, quiero mi auditoría gratis de redes sociales. Mi usuario de Instagram es: {valor}">
+          <input type="text" placeholder="@tuusuario" autocomplete="off" required>
+          <button type="submit">Quiero mi auditoría gratis</button>
+        </form>
+      </div>
+      <div class="audit-box">
+        <h4>Web</h4>
+        <p>Pásame tu web y te digo qué le está fallando y qué mejoraría.</p>
+        <form class="audit-form" data-service="Web" data-template="Hola, quiero mi auditoría gratis de mi web. Mi web es: {valor}">
+          <input type="text" placeholder="tuweb.com" autocomplete="off" required>
+          <button type="submit">Quiero mi auditoría gratis</button>
+        </form>
+      </div>
+      <div class="audit-box">
+        <h4>SEO / Blog</h4>
+        <p>Pásame tu web o blog y te digo qué está frenando tu posicionamiento.</p>
+        <form class="audit-form" data-service="SEO / Blog" data-template="Hola, quiero mi auditoría gratis de SEO. Mi web/blog es: {valor}">
+          <input type="text" placeholder="tublog.com" autocomplete="off" required>
+          <button type="submit">Quiero mi auditoría gratis</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL: CONFIGURADOR (incrustado directamente, igual que los demás modales de servicio) -->
+<div class="service-modal-overlay" id="modal-configurador">
+  <div class="service-modal" style="max-width:1180px;">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+    <div class="section-label">Configurador</div>
+    <h2 style="max-width:none;">Haz tu Kairea ideal.</h2>
+    <p class="modal-lead">Elige los servicios, ajusta cada barra a tu medida y mira el precio moverse en tiempo real. Al final, te lo mandamos por WhatsApp tal cual lo has dejado.</p>
+
+    <div class="configurator-layout">
+      <div class="configurator-main">
+        <div class="service-toggle-grid">
+          <button type="button" class="service-toggle" id="toggle-redes" data-service="redes">
+            <div class="st-check"></div>
+            <h3>Redes sociales</h3>
+            <p>Gestión, packs o plantillas.</p>
+          </button>
+          <button type="button" class="service-toggle" id="toggle-web" data-service="web">
+            <div class="st-check"></div>
+            <h3>Web</h3>
+            <p>Landing, básica o completa.</p>
+          </button>
+          <button type="button" class="service-toggle" id="toggle-seo" data-service="seo">
+            <div class="st-check"></div>
+            <h3>SEO / blog</h3>
+            <p>Para quien ya tiene web.</p>
+          </button>
+          <button type="button" class="service-toggle" id="toggle-diseno" data-service="diseno">
+            <div class="st-check"></div>
+            <h3>Diseño gráfico</h3>
+            <p>Logo, identidad, papelería...</p>
+          </button>
+        </div>
+
+        <!-- PANEL REDES -->
+        <div class="config-panel" id="panel-redes">
+          <h4>Redes sociales</h4>
+          <p class="config-sub">¿Cómo prefieres tener tus redes cubiertas?</p>
+          <div class="mode-tabs">
+            <button type="button" class="mode-tab" data-mode="gestion">Gestión completa</button>
+            <button type="button" class="mode-tab" data-mode="packs">Packs para autopublicar</button>
+            <button type="button" class="mode-tab" data-mode="plantillas">Plantillas editables</button>
+          </div>
+
+          <div id="redes-mode-gestion">
+            <div class="slider-block">
+              <div class="slider-top"><span class="tier-name" id="redesTierName">Starter</span><span class="tier-price" id="redesTierPrice">150€/mes</span></div>
+              <input type="range" id="redesSlider" min="0" max="2" step="1" value="0">
+              <div class="slider-scale"><span>Starter</span><span>Pro</span><span>Premium</span></div>
+              <div class="tier-includes" id="redesIncludes"></div>
+            </div>
+            <div class="cfg-pricing-toggle">
+              <span class="cfg-toggle-label mensual active">Mensual</span>
+              <button type="button" class="cfg-toggle-switch" id="annualToggle" aria-pressed="false"><span class="cfg-toggle-knob"></span></button>
+              <span class="cfg-toggle-label anual">Anual <span class="cfg-toggle-badge">Ahorra ~40%</span></span>
+            </div>
+          </div>
+
+          <div id="redes-mode-packs" style="display:none;">
+            <p class="config-sub" style="margin-bottom:18px;">Todo se puede combinar: pide solo posts, solo reels, o los dos a la vez.</p>
+
+            <div class="check-row" style="border-top:none;padding-top:0;">
+              <input type="checkbox" id="wantPosts">
+              <label for="wantPosts">Posts sueltos <span style="color:var(--crema-dim);font-size:0.8rem;">(foto/gráfica + copy, listos para publicar)</span></label>
+              <span class="row-price" id="postsRowPrice">Desde 22€/ud</span>
+            </div>
+            <div class="slider-block" id="postsSliderBlock" style="display:none;margin-left:30px;margin-top:10px;">
+              <div class="slider-top"><span class="tier-name" id="postsQtyLabel">2 posts</span><span class="tier-price" id="postsPrice">44€</span></div>
+              <input type="range" id="postsSlider" min="2" max="30" step="1" value="2">
+              <div class="slider-scale"><span>2</span><span>10</span><span>20</span><span>30</span></div>
+            </div>
+
+            <div class="check-row" id="reelsCheckRow">
+              <input type="checkbox" id="wantReels">
+              <label for="wantReels">Reels sueltos <span style="color:var(--crema-dim);font-size:0.8rem;">(según complejidad y duración)</span></label>
+              <span class="row-price" id="reelsRowPrice">Desde 29€/ud</span>
+            </div>
+            <div id="reelsBlock" style="display:none;margin-left:30px;margin-top:10px;">
+              <div class="mode-tabs" style="margin-bottom:16px;">
+                <button type="button" class="mode-tab reel-tab" data-complexity="simple">Simple · 29€</button>
+                <button type="button" class="mode-tab reel-tab" data-complexity="media">Media · 45€</button>
+                <button type="button" class="mode-tab reel-tab" data-complexity="avanzada">Avanzada · 70€</button>
+              </div>
+              <div class="stepper" style="margin-left:0;">
+                <button type="button" class="step-btn" data-target="reelQty" data-delta="-1">−</button>
+                <span class="step-val" id="reelQtyVal">1</span> reel(s)
+                <button type="button" class="step-btn" data-target="reelQty" data-delta="1">+</button>
+                <span class="tier-price" id="reelsPrice" style="margin-left:16px;">29€</span>
+              </div>
+            </div>
+
+            <div class="tier-includes" style="margin-top:18px;">Sin gestión, sin calendario, sin informe mensual — solo el contenido, publicado por vosotros cuando queráis.</div>
+          </div>
+
+          <div id="redes-mode-plantillas" style="display:none;">
+            <div class="option-grid" style="grid-template-columns:repeat(2,1fr);">
+              <div class="option-card" data-template="p5">
+                <div class="opt-name">Pack 5 plantillas</div>
+                <div class="opt-price">49€</div>
+                <div class="opt-note">Editables en Canva, para feed.</div>
+              </div>
+              <div class="option-card" data-template="p10">
+                <div class="opt-name">Pack 10 plantillas</div>
+                <div class="opt-price">89€</div>
+                <div class="opt-note">Editables en Canva, para feed.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="addon-note">
+            <div class="check-row">
+              <input type="checkbox" id="communityManager">
+              <label for="communityManager">También quiero gestión de comentarios y comunidad (Community Manager)</label>
+              <span class="row-price">A consultar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL WEB -->
+        <div class="config-panel" id="panel-web">
+          <h4>Web</h4>
+          <p class="config-sub">HTML propio, sin plantillas ni WordPress. Elige el alcance.</p>
+          <div class="option-grid">
+            <div class="option-card" data-web="landing">
+              <div class="opt-name">Landing page</div>
+              <div class="opt-price">450€</div>
+              <div class="opt-note">1 página · lista en 7-10 días</div>
+            </div>
+            <div class="option-card" data-web="basica">
+              <div class="opt-name">Web básica</div>
+              <div class="opt-price">699€</div>
+              <div class="opt-note">Hasta 3 páginas</div>
+            </div>
+            <div class="option-card" data-web="completa">
+              <div class="opt-name">Web completa</div>
+              <div class="opt-price">929€</div>
+              <div class="opt-note">Hasta 5 páginas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL SEO -->
+        <div class="config-panel" id="panel-seo">
+          <h4>SEO / gestión de blog</h4>
+          <p class="config-sub">Para quien ya tiene su propia web y quiere posicionar entradas de blog.</p>
+          <div class="slider-block">
+            <div class="slider-top"><span class="tier-name" id="seoTierName">Starter</span><span class="tier-price" id="seoTierPrice">129€/mes</span></div>
+            <input type="range" id="seoSlider" min="0" max="2" step="1" value="0">
+            <div class="slider-scale"><span>1 entrada/mes</span><span>2 entradas/mes</span><span>4 entradas/mes</span></div>
+          </div>
+          <div class="cfg-pricing-toggle">
+            <span class="cfg-toggle-label mensual active">Mensual</span>
+            <button type="button" class="cfg-toggle-switch" id="annualToggle2" aria-pressed="false"><span class="cfg-toggle-knob"></span></button>
+            <span class="cfg-toggle-label anual">Anual <span class="cfg-toggle-badge">Ahorra ~40%</span></span>
+          </div>
+        </div>
+
+        <!-- PANEL DISEÑO GRÁFICO -->
+        <div class="config-panel" id="panel-diseno">
+          <h4>Diseño gráfico</h4>
+          <p class="config-sub">Elige piezas sueltas, o la identidad completa (ya incluye logo, manual y papelería).</p>
+          <div class="checklist">
+            <div class="check-row featured-row">
+              <input type="checkbox" id="d-completa">
+              <label for="d-completa">Identidad de marca completa <span style="color:var(--crema-dim);font-size:0.8rem;">— logo + manual + papelería + aplicaciones</span></label>
+              <span class="row-price">980€</span>
+            </div>
+            <div class="check-row" id="row-logo">
+              <input type="checkbox" id="d-logo">
+              <label for="d-logo">Logotipo</label>
+              <span class="row-price">150€</span>
+            </div>
+            <div class="check-row">
+              <input type="checkbox" id="d-tipografia">
+              <label for="d-tipografia">Sistema tipográfico</label>
+              <span class="row-price">90€</span>
+            </div>
+            <div class="check-row">
+              <input type="checkbox" id="d-basica">
+              <label for="d-basica">Identidad básica <span style="color:var(--crema-dim);font-size:0.8rem;">(logo + colores + tipografía + tarjeta)</span></label>
+              <span class="row-price">350€</span>
+            </div>
+            <div class="check-row" id="row-manual">
+              <input type="checkbox" id="d-manual">
+              <label for="d-manual">Manual de marca</label>
+              <span class="row-price">300€</span>
+            </div>
+            <div class="check-row" id="row-papeleria">
+              <input type="checkbox" id="d-papeleria">
+              <label for="d-papeleria">Papelería corporativa</label>
+              <span class="row-price">Desde 150€</span>
+            </div>
+            <div>
+              <div class="check-row">
+                <input type="checkbox" id="d-editorial">
+                <label for="d-editorial">Diseño editorial <span style="color:var(--crema-dim);font-size:0.8rem;">(catálogos, dossiers...)</span></label>
+                <span class="row-price" id="editorialPrice">Desde 400€</span>
+              </div>
+              <div class="stepper" id="editorialStepper" style="display:none;">
+                <button type="button" class="step-btn" data-target="editorialPages" data-delta="-2">−</button>
+                <span class="step-val" id="editorialPagesVal">12</span> páginas
+                <button type="button" class="step-btn" data-target="editorialPages" data-delta="2">+</button>
+              </div>
+            </div>
+            <div>
+              <div class="check-row">
+                <input type="checkbox" id="d-pieza">
+                <label for="d-pieza">Pieza gráfica suelta <span style="color:var(--crema-dim);font-size:0.8rem;">(cartel, flyer, banner...)</span></label>
+                <span class="row-price" id="piezaPrice">Desde 60€</span>
+              </div>
+              <div class="stepper" id="piezaStepper" style="display:none;">
+                <button type="button" class="step-btn" data-target="piezaQty" data-delta="-1">−</button>
+                <span class="step-val" id="piezaQtyVal">1</span> pieza(s)
+                <button type="button" class="step-btn" data-target="piezaQty" data-delta="1">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="summary-panel" id="summaryPanel">
+          <h3>Tu Kairea</h3>
+          <div id="summaryEmpty" class="summary-empty">Elige al menos un servicio a la izquierda para ver tu configuración aquí.</div>
+          <div id="summaryList" class="summary-list"></div>
+          <div id="summaryTotals" class="summary-totals" style="display:none;">
+            <div class="summary-total-row" id="totalUnicoRow" style="display:none;">
+              <span class="st-label">Pago único</span>
+              <span class="st-val" id="totalUnico">0€</span>
+            </div>
+            <div class="summary-total-row" id="totalRecurrenteRow" style="display:none;">
+              <span class="st-label" id="totalRecurrenteLabel">Cuota mensual</span>
+              <span class="st-val" id="totalRecurrente">0€</span>
+            </div>
+          </div>
+          <a class="summary-cta disabled" id="summaryCta" href="#" target="_blank" rel="noopener">Enviar por WhatsApp →</a>
+          <p class="summary-fine">Precios sin IVA. Es una estimación — lo cerramos en el diagnóstico gratuito.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="floating-total" id="floatingTotal">Tu Kairea: 0€</button>
+
+<!-- MODAL: REDES -->
+<div class="service-modal-overlay" id="modal-redes">
+  <div class="service-modal">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+    <div class="section-label">Redes sociales</div>
+    <h2>Contenido con criterio, no publicar por publicar.</h2>
+    <p class="modal-lead">Cada post con un porqué. Eliges cuántas redes gestionamos, nosotros nos encargamos de que cada una tenga sentido.</p>
+    <div class="pricing-toggle">
+      <span class="toggle-label mensual active">Mensual</span>
+      <button class="toggle-switch" aria-pressed="false" aria-label="Cambiar entre precio mensual y anual"><span class="toggle-knob"></span></button>
+      <span class="toggle-label anual">Anual <span class="toggle-badge">Ahorra ~40%</span></span>
+    </div>
+    <div class="modal-tier-grid">
+      <div class="tier-card">
+        <div class="service-num">Starter · 1 red</div>
+        <span class="price-old"></span>
+        <span class="price-new" data-monthly="150€/mes" data-annual="89€/mes" data-savings="732€">150€/mes</span>
+        <div class="tier-note" data-base="Sin permanencia.">Sin permanencia.</div>
+        <ul class="tier-list">
+          <li>6 publicaciones/mes</li>
+          <li>4 stories/mes</li>
+          <li>1 reel/mes</li>
+          <li>Estudio de briefing inicial</li>
+          <li>Informe mensual</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20gesti%C3%B3n%20de%20redes%20-%20Starter" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+      <div class="tier-card">
+        <div class="service-num">Pro · 2 redes</div>
+        <span class="price-old"></span>
+        <span class="price-new" data-monthly="290€/mes" data-annual="170€/mes" data-savings="1.440€">290€/mes</span>
+        <div class="tier-note" data-base="Sin permanencia.">Sin permanencia.</div>
+        <ul class="tier-list">
+          <li>12 publicaciones/mes</li>
+          <li>8 stories/mes</li>
+          <li>3 reels/mes</li>
+          <li>Social Media Manager</li>
+          <li>Estudio de briefing inicial</li>
+          <li>Informe mensual</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20gesti%C3%B3n%20de%20redes%20-%20Pro" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+      <div class="tier-card">
+        <div class="service-num">Premium · 3 redes</div>
+        <span class="price-old"></span>
+        <span class="price-new" data-monthly="649€/mes" data-annual="380€/mes" data-savings="3.228€">649€/mes</span>
+        <div class="tier-note" data-base="Sin permanencia.">Sin permanencia.</div>
+        <ul class="tier-list">
+          <li>18 publicaciones/mes</li>
+          <li>16 stories/mes</li>
+          <li>6 reels/mes</li>
+          <li>Social Media Manager</li>
+          <li>Estudio de briefing inicial</li>
+          <li>Informe mensual</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20gesti%C3%B3n%20de%20redes%20-%20Premium" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+    </div>
+    <p style="margin-top:24px;font-size:0.88rem;color:var(--crema-dim);">¿Necesitas también gestión de comentarios y comunidad? <strong style="color:var(--ambar);">Community Manager — a consultar.</strong></p>
+    <button type="button" class="mini-config-btn config-open-btn">🎛 Combínalo a tu manera — Haz tu Kairea</button>
+  </div>
+</div>
+
+<!-- MODAL: WEB (solo landings) -->
+<div class="service-modal-overlay" id="modal-web">
+  <div class="service-modal">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+    <div class="section-label">Web</div>
+    <h2>Nada de plantillas. Cada web, hecha a mano.</h2>
+    <p class="modal-lead">Desde una landing de una página hasta un sitio completo — sin WordPress, sin plugins que rompen cada actualización.</p>
+    <div class="modal-tier-grid">
+      <div class="tier-card">
+        <div class="service-num">Landing page</div>
+        <span class="price-new">Desde 450€</span>
+        <div class="tier-note">Pago único, sin IVA. Lista en 7-10 días.</div>
+        <ul class="tier-list">
+          <li>1 página de alto impacto</li>
+          <li>Copy y estructura persuasiva</li>
+          <li>Formulario de captación</li>
+          <li>Píxel de seguimiento</li>
+          <li>Ampliable a varias páginas</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20una%20landing%20page" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+      <div class="tier-card">
+        <div class="service-num">Web básica · hasta 3 páginas</div>
+        <span class="price-new">699€</span>
+        <div class="tier-note">Pago único, sin IVA.</div>
+        <ul class="tier-list">
+          <li>Diseño personalizado (sin plantillas)</li>
+          <li>Formulario de contacto</li>
+          <li>Optimización SEO básica</li>
+          <li>Adaptado a móvil y tablet</li>
+          <li>Seguridad y configuración inicial</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20una%20web%20b%C3%A1sica" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+      <div class="tier-card">
+        <div class="service-num">Web completa · hasta 5 páginas</div>
+        <span class="price-new">929€</span>
+        <div class="tier-note">Pago único, sin IVA.</div>
+        <ul class="tier-list">
+          <li>Diseño avanzado y estratégico</li>
+          <li>SEO avanzado + blog opcional</li>
+          <li>Formulario optimizado para conversión</li>
+          <li>Integración con herramientas externas</li>
+          <li>Seguridad avanzada</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20una%20web%20completa" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+    </div>
+    <p style="margin-top:24px;font-size:0.88rem;color:var(--crema-dim);">¿Necesitas una tienda online u otra cosa a medida? <strong style="color:var(--ambar);">A consultar.</strong></p>
+    <button type="button" class="mini-config-btn config-open-btn">🎛 Combínalo a tu manera — Haz tu Kairea</button>
+  </div>
+</div>
+
+<!-- MODAL: SEO -->
+<div class="service-modal-overlay" id="modal-seo">
+  <div class="service-modal">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+    <div class="section-label">SEO / gestión de blog</div>
+    <h2>Para quien ya tiene su propia web.</h2>
+    <p class="modal-lead">Seguimos publicando y posicionando entradas de blog — el equivalente de gestión de redes, pero en formato blog.</p>
+    <div class="pricing-toggle">
+      <span class="toggle-label mensual active">Mensual</span>
+      <button class="toggle-switch" aria-pressed="false" aria-label="Cambiar entre precio mensual y anual"><span class="toggle-knob"></span></button>
+      <span class="toggle-label anual">Anual <span class="toggle-badge">Ahorra ~40%</span></span>
+    </div>
+    <div class="modal-tier-grid">
+      <div class="tier-card">
+        <div class="service-num">Starter</div>
+        <span class="price-old"></span>
+        <span class="price-new" data-monthly="129€/mes" data-annual="77€/mes" data-savings="624€">129€/mes</span>
+        <div class="tier-note" data-base="Sin permanencia.">Sin permanencia.</div>
+        <ul class="tier-list">
+          <li>1 entrada optimizada/mes</li>
+          <li>Estudio de palabras clave</li>
+          <li>Optimización SEO On-Page</li>
+          <li>Auditoría técnica inicial</li>
+          <li>Informe mensual de posiciones</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20SEO%20-%20Starter" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+      <div class="tier-card">
+        <div class="service-num">Básico</div>
+        <span class="price-old"></span>
+        <span class="price-new" data-monthly="199€/mes" data-annual="119€/mes" data-savings="960€">199€/mes</span>
+        <div class="tier-note" data-base="Sin permanencia.">Sin permanencia.</div>
+        <ul class="tier-list">
+          <li>2 entradas optimizadas/mes</li>
+          <li>Todo lo de Starter</li>
+          <li>Optimización de metadatos</li>
+          <li>Enlazado interno estratégico</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20SEO%20-%20B%C3%A1sico" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+      <div class="tier-card">
+        <div class="service-num">Pro</div>
+        <span class="price-old"></span>
+        <span class="price-new" data-monthly="399€/mes" data-annual="239€/mes" data-savings="1.920€">399€/mes</span>
+        <div class="tier-note" data-base="Sin permanencia.">Sin permanencia.</div>
+        <ul class="tier-list">
+          <li>4 entradas optimizadas/mes</li>
+          <li>Todo lo de Básico</li>
+          <li>SEO local y Google Business Profile</li>
+          <li>Datos estructurados (Schema)</li>
+        </ul>
+        <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20necesito%20SEO%20-%20Pro" target="_blank" rel="noopener">Necesito esto →</a>
+      </div>
+    </div>
+
+    <button type="button" class="mini-config-btn config-open-btn">🎛 Combínalo a tu manera — Haz tu Kairea</button>
+  </div>
+</div>
+
+<!-- MODAL: DISEÑO GRÁFICO -->
+<div class="service-modal-overlay" id="modal-diseno">
+  <div class="service-modal" style="max-width:960px;">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+    <div class="section-label">Diseño gráfico</div>
+    <h2>Un logo no te hace una marca.</h2>
+    <p class="modal-lead">Logo, sistema tipográfico, manual de marca, papelería y más. El sistema completo, no piezas sueltas.</p>
+    <div class="featured-card">
+      <div class="featured-card-inner">
+        <div>
+          <div class="featured-badge">El pack ancla</div>
+          <h3>Identidad de marca completa</h3>
+          <p>Logo + manual de marca + papelería + aplicaciones. Incluye el manual, que por separado vale 300€.</p>
+        </div>
+        <div class="featured-price-block">
+          <div class="featured-price">980€</div>
+          <a class="btn-mini" href="https://wa.me/34624344097?text=Hola%2C%20quiero%20la%20identidad%20de%20marca%20completa" target="_blank" rel="noopener">La quiero →</a>
+        </div>
+      </div>
+    </div>
+    <div class="work-grid">
+      <div class="work-card"><div class="service-num">Logo</div><h3>Logotipo</h3><div class="work-price">150€</div></div>
+      <div class="work-card"><div class="service-num">Tipografía</div><h3>Sistema tipográfico</h3><div class="work-price">90€</div></div>
+      <div class="work-card"><div class="service-num">Identidad</div><h3>Identidad básica</h3><div class="work-price">350€</div></div>
+      <div class="work-card"><div class="service-num">Manual</div><h3>Manual de marca</h3><div class="work-price">300€</div></div>
+      <div class="work-card"><div class="service-num">Papelería</div><h3>Papelería corporativa</h3><div class="work-price">Desde 150€</div></div>
+      <div class="work-card"><div class="service-num">Editorial</div><h3>Diseño editorial</h3><div class="work-price">Desde 35€/pág.</div></div>
+      <div class="work-card"><div class="service-num">Suelto</div><h3>Pieza gráfica suelta</h3><div class="work-price">Desde 60€</div></div>
+      <div class="work-card"><div class="service-num">Más</div><h3>¿Algo distinto?</h3><div class="work-price">A consultar</div></div>
+    </div>
+    <a class="modal-footer-link" href="diseno-grafico.html">Ver página completa de diseño gráfico →</a>
+    <button type="button" class="mini-config-btn config-open-btn">🎛 Combínalo a tu manera — Haz tu Kairea</button>
+  </div>
+</div>
+
+<section id="proceso">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-label">Cómo trabajamos</div>
+      <h2>Sin sorpresas, sin procesos eternos.</h2>
+    </div>
+    <div class="process-list reveal">
+      <div class="process-item">
+        <div class="process-step">01</div>
+        <div><h3>Diagnóstico gratuito</h3><p>Hablamos 15-20 minutos sobre tu situación actual y lo que necesitas de verdad.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-step">02</div>
+        <div><h3>Propuesta clara</h3><p>Recibes un plan concreto, con precio cerrado y plazos reales, sin letra pequeña.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-step">03</div>
+        <div><h3>Contrato</h3><p>Cerramos condiciones por escrito antes de empezar. Sin ambigüedades, sin sorpresas a mitad de proyecto.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-step">04</div>
+        <div><h3>Ejecución</h3><p>Trabajamos con entregas visibles durante todo el proceso, no una sorpresa al final.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-label">Sobre nosotros</div>
+      <h2>Un estudio pequeño, a propósito.</h2>
+    </div>
+    <div class="about-box reveal">
+      <p>Detrás de Kairea hay más de 10 años currando en el sector — viendo por dentro cómo se exprime al cliente que paga cada mes sin saber muy bien qué está comprando ni quién se lo está haciendo.</p>
+      <p>Si ya pasaste por eso —muchas veces vía Kit Digital— y te quedaste con una web plantilla y ningún seguimiento real, sabes exactamente por qué existe Kairea.</p>
+      <p>No crecemos a base de coger todo lo que llega. Cada proyecto pasa por una sola persona de principio a fin: la que diseña, la que escribe, la que responde cuando escribes un domingo por la noche porque algo no cuadra.</p>
+    </div>
+  </div>
+</section>
+
+<section id="dudas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-label">Antes de escribirnos</div>
+      <h2>Lo que seguramente te estás preguntando.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>¿Es esto muy caro para un negocio pequeño?</h3>
+        <p>Depende de lo que necesites, por eso el precio se ajusta desde 89€/mes en redes o desde 450€ en una landing — no hay un paquete único. Habla con nosotros o pruébalo tú mismo en el configurador, verás el precio moverse en tiempo real antes de escribirnos.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Y si no encaja mi proyecto con vosotros?</h3>
+        <p>Te lo decimos en el diagnóstico gratuito, sin rodeos. Preferimos no coger un proyecto que no podemos cuidar bien antes que cobrarte por algo a medias.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cuánto se tarda en tener algo funcionando?</h3>
+        <p>Una landing suele estar lista en 7-10 días. En redes y SEO, el calendario del primer mes se define en la propuesta inicial — con plazos reales, no genéricos.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo dejarlo cuando quiera?</h3>
+        <p>Sí. Los servicios recurrentes no tienen permanencia. Si algo no está funcionando, lo hablamos primero — pero no te atamos con letra pequeña.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="cta-final">
+  <div class="hero-glow" style="opacity:0.6;"></div>
+  <div class="burst-ring"></div>
+  <div class="burst-ring r2"></div>
+  <div class="burst-ring r3"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-label">Contacto</div>
+      <h2>¿Hablamos de tu proyecto?</h2>
+      <p>Diagnóstico gratuito, sin compromiso.</p>
+      <a class="btn-primary" href="https://wa.me/34624344097?text=Hola%2C%20quiero%20contarte%20mi%20proyecto" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    </div>
+    <div class="reveal cta-alt">
+      <p class="or-divider">o cuéntanoslo aquí mismo</p>
+    </div>
+    <div class="wa-chat reveal">
+      <div class="wa-chat-header">
+        <div class="wa-avatar">k</div>
+        <div>
+          <div class="wa-chat-name">Kairea</div>
+          <div class="wa-chat-status"><span class="wa-dot"></span> Suele responder rápido</div>
+        </div>
+      </div>
+      <div class="wa-chat-body">
+        <div class="wa-bubble wa-in">¡Hola! 👋 Escribe aquí lo que necesitas y seguimos la conversación por WhatsApp.</div>
+      </div>
+      <form class="wa-chat-input">
+        <input type="text" placeholder="Escribe tu mensaje..." autocomplete="off" required>
+        <button type="submit" aria-label="Enviar por WhatsApp">➤</button>
+      </form>
+    </div>
+    <p class="reveal" style="text-align:center;margin-top:22px;font-size:0.88rem;color:var(--crema-dim);">¿Prefieres el email? Escríbenos a <a href="mailto:info@kaireaestudio.com" style="color:var(--ambar);">info@kaireaestudio.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">Kairea © 2026</div>
+    <div class="footer-contact">
+      <a href="mailto:info@kaireaestudio.com">info@kaireaestudio.com</a>
+      <span class="footer-dot">·</span>
+      <a href="https://wa.me/34624344097?text=Hola%2C%20quiero%20contarte%20mi%20proyecto" target="_blank" rel="noopener">624 34 40 97</a>
+    </div>
+    <div class="footer-links">
+      <a href="diseno-grafico.html">Diseño gráfico</a>
+      <span class="footer-dot">·</span>
+      <a href="politica-cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="cookie-banner-inner">
+    <p class="cookie-text">Usamos <strong>cookies técnicas necesarias</strong> para que la web funcione bien. Nada de rastreo ni publicidad. Más detalle en la <a href="politica-cookies.html">política de cookies</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn-accept" id="cookieAcceptBtn" type="button">Vale, lo pillo</button>
+    </div>
+  </div>
+</div>
+
+<div class="bounce-ball" id="bounceBall" aria-hidden="true"></div>
+
+<script>
+  // pricing toggle (mensual/anual) — funciona en todas las instancias a la vez (modal Redes + modal SEO)
+  let isAnnual = false;
+  function renderPrices(){
+    document.querySelectorAll('[data-monthly]').forEach(el=>{
+      const card = el.closest('.tier-card');
+      if(!card) return;
+      const oldPrice = card.querySelector('.price-old');
+      const note = card.querySelector('.tier-note');
+      if(isAnnual){
+        el.textContent = el.dataset.annual;
+        if(oldPrice){ oldPrice.style.display = 'inline'; oldPrice.textContent = el.dataset.monthly; }
+        if(note && el.dataset.savings){ note.textContent = 'Ahorras ' + el.dataset.savings + '/año pagando el año completo.'; }
+      } else {
+        el.textContent = el.dataset.monthly;
+        if(oldPrice){ oldPrice.style.display = 'none'; }
+        if(note){ note.textContent = note.dataset.base; }
+      }
+    });
+  }
+  document.querySelectorAll('.toggle-switch').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      isAnnual = !isAnnual;
+      document.querySelectorAll('.toggle-switch').forEach(b=>{ b.classList.toggle('on', isAnnual); b.setAttribute('aria-pressed', isAnnual); });
+      document.querySelectorAll('.toggle-label.mensual').forEach(l=>l.classList.toggle('active', !isAnnual));
+      document.querySelectorAll('.toggle-label.anual').forEach(l=>l.classList.toggle('active', isAnnual));
+      renderPrices();
+    });
+  });
+  renderPrices();
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // chat de WhatsApp — al enviar, abre WhatsApp con el mensaje ya escrito (funciona con varios widgets en la página)
+  document.querySelectorAll('.wa-chat').forEach(function(chat){
+    const waForm = chat.querySelector('.wa-chat-input');
+    const waBody = chat.querySelector('.wa-chat-body');
+    const waText = chat.querySelector('input[type="text"]');
+    if(!waForm) return;
+
+    waForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const text = waText.value.trim();
+      if(!text) return;
+
+      const bubble = document.createElement('div');
+      bubble.className = 'wa-bubble wa-out';
+      bubble.textContent = text;
+      waBody.appendChild(bubble);
+      waBody.scrollTop = waBody.scrollHeight;
+      waText.value = '';
+
+      setTimeout(()=>{
+        window.open('https://wa.me/34624344097?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      }, 450);
+    });
+  });
+
+  // auditoría gratis — cada modal de servicio tiene su propio mini-formulario que abre WhatsApp con el dato ya escrito
+  document.querySelectorAll('.audit-form').forEach(function(form){
+    const input = form.querySelector('input[type="text"]');
+    const btn = form.querySelector('button');
+    const template = form.getAttribute('data-template');
+    const btnLabelOriginal = btn.textContent;
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const valor = input.value.trim();
+      if(!valor) return;
+
+      const msg = template.replace('{valor}', valor);
+      window.open('https://wa.me/34624344097?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+
+      btn.textContent = '¡Enviado! ✓';
+      btn.classList.add('sent');
+      setTimeout(()=>{
+        btn.textContent = btnLabelOriginal;
+        btn.classList.remove('sent');
+        input.value = '';
+      }, 2600);
+    });
+  });
+
+  // servicios: al pasar el ratón (escritorio) o al tocar (móvil), se abre el modal "a modo página"
+  const hasHover = window.matchMedia('(hover: hover)').matches;
+  function openServiceModal(key){
+    document.querySelectorAll('.service-modal-overlay').forEach(m=>m.classList.remove('open'));
+    const modal = document.getElementById('modal-' + key);
+    if(modal){ modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  }
+  function closeServiceModals(){
+    document.querySelectorAll('.service-modal-overlay').forEach(m=>m.classList.remove('open'));
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.service-preview').forEach(card=>{
+    const key = card.dataset.service;
+    if(hasHover){
+      let timer;
+      card.addEventListener('mouseenter', ()=>{ timer = setTimeout(()=>openServiceModal(key), 150); });
+      card.addEventListener('mouseleave', ()=>{ clearTimeout(timer); });
+    } else {
+      card.addEventListener('click', ()=>openServiceModal(key));
+    }
+  });
+  document.querySelectorAll('.service-modal-overlay').forEach(overlay=>{
+    overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closeServiceModals(); });
+    const closeBtn = overlay.querySelector('.modal-close');
+    if(closeBtn) closeBtn.addEventListener('click', closeServiceModals);
+  });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeServiceModals(); });
+  document.querySelectorAll('.config-open-btn').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      openServiceModal('configurador');
+    });
+  });
+
+  // burst rings on CTA final
+  const ctaFinal = document.getElementById('cta-final');
+  const burstObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ ctaFinal.classList.add('burst'); burstObserver.unobserve(ctaFinal); }
+    });
+  }, {threshold:0.4});
+  burstObserver.observe(ctaFinal);
+
+  // falling drops canvas
+  const canvas = document.getElementById('drops');
+  const ctx = canvas.getContext('2d');
+  let w, h, drops = [];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function resize(){
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+  function makeDrop(){
+    return {
+      x: Math.random()*w,
+      y: Math.random()*-h,
+      r: 1.5 + Math.random()*3,
+      speed: 0.4 + Math.random()*0.9,
+      hue: Math.random() > 0.5 ? '193,80,46' : '232,169,76',
+      alpha: 0.15 + Math.random()*0.25
+    };
+  }
+  function initDrops(){
+    const count = w < 640 ? 16 : 28;
+    drops = Array.from({length:count}, makeDrop);
+  }
+  function tick(){
+    ctx.clearRect(0,0,w,h);
+    drops.forEach(d=>{
+      d.y += d.speed;
+      if(d.y > h + 20){ Object.assign(d, makeDrop(), {y:-20}); }
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(${d.hue},${d.alpha})`;
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI*2);
+      ctx.fill();
+    });
+    requestAnimationFrame(tick);
+  }
+  if(!reduceMotion){
+    window.addEventListener('resize', resize);
+    resize(); initDrops(); tick();
+  }
+
+  // bola brillante rebotando + explosión de mini-logos al pasar el ratón cerca
+  (function(){
+    const ball = document.getElementById('bounceBall');
+    if(!ball || reduceMotion) return;
+    const size = ball.offsetWidth || 64;
+    const navH = 150; // no invadir nav + ticker
+    let bw = window.innerWidth, bh = window.innerHeight;
+    let bx = Math.random() * (bw - size);
+    let by = navH + Math.random() * Math.max(bh - navH - size - 40, 40);
+    let bvx = (Math.random() > 0.5 ? 1 : -1) * (1.2 + Math.random() * 0.7);
+    let bvy = (Math.random() > 0.5 ? 1 : -1) * (1.2 + Math.random() * 0.7);
+    let mouseX = -9999, mouseY = -9999;
+    let burstCooldown = 0;
+
+    window.addEventListener('resize', ()=>{ bw = window.innerWidth; bh = window.innerHeight; });
+    window.addEventListener('mousemove', (e)=>{ mouseX = e.clientX; mouseY = e.clientY; });
+
+    function spawnBurst(cx, cy){
+      const count = 9;
+      for(let i = 0; i < count; i++){
+        const d = document.createElement('div');
+        d.className = 'logo-droplet';
+        d.innerHTML = 'k<span class="d"></span>';
+        d.style.left = cx + 'px';
+        d.style.top = cy + 'px';
+        d.style.transform = 'translate(-50%,-50%) scale(1)';
+        d.style.opacity = '1';
+        document.body.appendChild(d);
+        const angle = (Math.PI * 2 * i / count) + (Math.random() * 0.4 - 0.2);
+        const dist = 40 + Math.random() * 36;
+        const dx = Math.cos(angle) * dist;
+        const dy = Math.sin(angle) * dist;
+        requestAnimationFrame(()=>{
+          d.style.transition = 'transform .6s cubic-bezier(.2,.7,.3,1), opacity .6s ease';
+          d.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) scale(0.4)`;
+          d.style.opacity = '0';
+        });
+        setTimeout(()=>{ d.remove(); }, 650);
+      }
+    }
+
+    function ballTick(){
+      bx += bvx; by += bvy;
+      const maxX = bw - size, maxY = bh - size - 16;
+      if(bx <= 0){ bx = 0; bvx *= -1; }
+      if(bx >= maxX){ bx = maxX; bvx *= -1; }
+      if(by <= navH){ by = navH; bvy *= -1; }
+      if(by >= maxY){ by = maxY; bvy *= -1; }
+      ball.style.transform = `translate(${bx}px, ${by}px)`;
+
+      if(burstCooldown > 0) burstCooldown--;
+      const cx = bx + size / 2, cy = by + size / 2;
+      const dist = Math.hypot(mouseX - cx, mouseY - cy);
+      if(dist < size / 2 + 8 && burstCooldown === 0){
+        spawnBurst(cx, cy);
+        burstCooldown = 55; // ~1s a 60fps, evita ráfagas continuas
+      }
+      requestAnimationFrame(ballTick);
+    }
+    requestAnimationFrame(ballTick);
+  })();
+
+  // ===== CONFIGURADOR INCRUSTADO ("Haz tu Kairea ideal") =====
+  (function(){
+    const REDES_TIERS = [
+      {name:'Starter', redes:1, pubs:6, stories:4, reels:1, monthly:150, annual:89},
+      {name:'Pro', redes:2, pubs:12, stories:8, reels:3, monthly:290, annual:170},
+      {name:'Premium', redes:3, pubs:18, stories:16, reels:6, monthly:649, annual:380}
+    ];
+    const SEO_TIERS = [
+      {name:'Starter', posts:1, monthly:129, annual:77},
+      {name:'Básico', posts:2, monthly:199, annual:119},
+      {name:'Pro', posts:4, monthly:399, annual:239}
+    ];
+    function postUnitRate(qty){
+      if(qty < 5) return 22;
+      if(qty < 10) return 19;
+      if(qty < 20) return 17;
+      return 15;
+    }
+    function postPackPrice(qty){ return qty * postUnitRate(qty); }
+    const REEL_PRICES = {simple:29, media:45, avanzada:70};
+    const TEMPLATE_PACKS = {p5:{label:'Pack 5 plantillas editables', price:49}, p10:{label:'Pack 10 plantillas editables', price:89}};
+    const WEB_TIERS = {
+      landing:{label:'Landing page', price:450, note:'7-10 días'},
+      basica:{label:'Web básica (hasta 3 páginas)', price:699},
+      completa:{label:'Web completa (hasta 5 páginas)', price:929}
+    };
+
+    const cfgState = {
+      isAnnual:false,
+      redes:{active:false, mode:'gestion', tierIdx:0, wantPosts:false, postsQty:2, wantReels:false, reelComplexity:'simple', reelQty:1, template:null, communityManager:false},
+      web:{active:false, tier:null},
+      seo:{active:false, tierIdx:0},
+      diseno:{active:false, completa:false, logo:false, tipografia:false, basica:false, manual:false, papeleria:false, editorial:false, editorialPages:12, pieza:false, piezaQty:1}
+    };
+
+    function fmt(n){ return n.toLocaleString('es-ES') + '€'; }
+
+    function cfgFillRange(el){
+      const min = +el.min, max = +el.max, val = +el.value;
+      const pct = ((val-min)/(max-min))*100;
+      el.style.background = `linear-gradient(90deg, var(--terracota) ${pct}%, var(--ink-deep) ${pct}%)`;
+    }
+
+    const redesToggle = document.getElementById('toggle-redes');
+    if(!redesToggle) return; // el configurador no está en esta página
+
+    document.querySelectorAll('.service-toggle').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const svc = btn.dataset.service;
+        cfgState[svc].active = !cfgState[svc].active;
+        btn.classList.toggle('on', cfgState[svc].active);
+        document.getElementById('panel-'+svc).classList.toggle('show', cfgState[svc].active);
+        cfgRender();
+      });
+    });
+
+    document.querySelectorAll('.mode-tab').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        if(btn.classList.contains('reel-tab')) return; // gestionado aparte
+        cfgState.redes.mode = btn.dataset.mode;
+        document.querySelectorAll('.mode-tab').forEach(b=>{ if(!b.classList.contains('reel-tab')) b.classList.toggle('on', b===btn); });
+        document.getElementById('redes-mode-gestion').style.display = cfgState.redes.mode==='gestion' ? '' : 'none';
+        document.getElementById('redes-mode-packs').style.display = cfgState.redes.mode==='packs' ? '' : 'none';
+        document.getElementById('redes-mode-plantillas').style.display = cfgState.redes.mode==='plantillas' ? '' : 'none';
+        cfgRender();
+      });
+    });
+    document.querySelector('.mode-tab[data-mode="gestion"]').classList.add('on');
+
+    const redesSlider = document.getElementById('redesSlider');
+    redesSlider.addEventListener('input', ()=>{ cfgState.redes.tierIdx = +redesSlider.value; cfgFillRange(redesSlider); cfgRender(); });
+
+    const postsSlider = document.getElementById('postsSlider');
+    postsSlider.addEventListener('input', ()=>{ cfgState.redes.postsQty = +postsSlider.value; cfgFillRange(postsSlider); cfgRender(); });
+
+    document.getElementById('wantPosts').addEventListener('change', (e)=>{
+      cfgState.redes.wantPosts = e.target.checked;
+      document.getElementById('postsSliderBlock').style.display = e.target.checked ? 'block' : 'none';
+      cfgRender();
+    });
+
+    document.getElementById('wantReels').addEventListener('change', (e)=>{
+      cfgState.redes.wantReels = e.target.checked;
+      document.getElementById('reelsBlock').style.display = e.target.checked ? 'block' : 'none';
+      cfgRender();
+    });
+
+    document.querySelectorAll('.reel-tab').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        cfgState.redes.reelComplexity = btn.dataset.complexity;
+        document.querySelectorAll('.reel-tab').forEach(b=>b.classList.toggle('on', b===btn));
+        cfgRender();
+      });
+    });
+    document.querySelector('.reel-tab[data-complexity="simple"]').classList.add('on');
+
+    document.querySelectorAll('#redes-mode-plantillas .option-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        cfgState.redes.template = cfgState.redes.template === card.dataset.template ? null : card.dataset.template;
+        document.querySelectorAll('#redes-mode-plantillas .option-card').forEach(c=>c.classList.toggle('on', c.dataset.template===cfgState.redes.template));
+        cfgRender();
+      });
+    });
+
+    document.getElementById('communityManager').addEventListener('change', (e)=>{ cfgState.redes.communityManager = e.target.checked; cfgRender(); });
+
+    document.querySelectorAll('#panel-web .option-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        cfgState.web.tier = cfgState.web.tier === card.dataset.web ? null : card.dataset.web;
+        document.querySelectorAll('#panel-web .option-card').forEach(c=>c.classList.toggle('on', c.dataset.web===cfgState.web.tier));
+        cfgRender();
+      });
+    });
+
+    const seoSlider = document.getElementById('seoSlider');
+    seoSlider.addEventListener('input', ()=>{ cfgState.seo.tierIdx = +seoSlider.value; cfgFillRange(seoSlider); cfgRender(); });
+
+    function cfgSetAnnual(val){
+      cfgState.isAnnual = val;
+      document.querySelectorAll('.cfg-toggle-switch').forEach(b=>b.classList.toggle('on', val));
+      document.querySelectorAll('.cfg-toggle-label.mensual').forEach(l=>l.classList.toggle('active', !val));
+      document.querySelectorAll('.cfg-toggle-label.anual').forEach(l=>l.classList.toggle('active', val));
+      cfgRender();
+    }
+    document.getElementById('annualToggle').addEventListener('click', ()=>cfgSetAnnual(!cfgState.isAnnual));
+    document.getElementById('annualToggle2').addEventListener('click', ()=>cfgSetAnnual(!cfgState.isAnnual));
+
+    const dMap = {'d-completa':'completa','d-logo':'logo','d-tipografia':'tipografia','d-basica':'basica','d-manual':'manual','d-papeleria':'papeleria','d-editorial':'editorial','d-pieza':'pieza'};
+    Object.keys(dMap).forEach(id=>{
+      document.getElementById(id).addEventListener('change', (e)=>{
+        cfgState.diseno[dMap[id]] = e.target.checked;
+        if(dMap[id]==='completa'){
+          const lock = e.target.checked;
+          ['d-logo','d-manual','d-papeleria'].forEach(lid=>{
+            const el = document.getElementById(lid);
+            el.disabled = lock;
+            if(lock){ el.checked = false; }
+          });
+          cfgState.diseno.logo = lock ? false : cfgState.diseno.logo;
+          cfgState.diseno.manual = lock ? false : cfgState.diseno.manual;
+          cfgState.diseno.papeleria = lock ? false : cfgState.diseno.papeleria;
+          ['row-logo','row-manual','row-papeleria'].forEach(rid=>document.getElementById(rid).classList.toggle('disabled', lock));
+        }
+        document.getElementById('editorialStepper').style.display = cfgState.diseno.editorial ? 'flex' : 'none';
+        document.getElementById('piezaStepper').style.display = cfgState.diseno.pieza ? 'flex' : 'none';
+        cfgRender();
+      });
+    });
+
+    document.querySelectorAll('.step-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const target = btn.dataset.target, delta = +btn.dataset.delta;
+        if(target==='editorialPages'){
+          cfgState.diseno.editorialPages = Math.max(12, cfgState.diseno.editorialPages + delta);
+          document.getElementById('editorialPagesVal').textContent = cfgState.diseno.editorialPages;
+        } else if(target==='piezaQty'){
+          cfgState.diseno.piezaQty = Math.max(1, cfgState.diseno.piezaQty + delta);
+          document.getElementById('piezaQtyVal').textContent = cfgState.diseno.piezaQty;
+        } else if(target==='reelQty'){
+          cfgState.redes.reelQty = Math.max(1, cfgState.redes.reelQty + delta);
+          document.getElementById('reelQtyVal').textContent = cfgState.redes.reelQty;
+        }
+        cfgRender();
+      });
+    });
+
+    function cfgRender(){
+      const rTier = REDES_TIERS[cfgState.redes.tierIdx];
+      document.getElementById('redesTierName').textContent = rTier.name;
+      document.getElementById('redesTierPrice').textContent = (cfgState.isAnnual ? rTier.annual : rTier.monthly) + '€/mes';
+      document.getElementById('redesIncludes').textContent = rTier.redes + (rTier.redes>1?' redes':' red') + ' · ' + rTier.pubs + ' publicaciones/mes · ' + rTier.stories + ' stories/mes · ' + rTier.reels + ' reels/mes';
+      cfgFillRange(redesSlider);
+
+      document.getElementById('postsQtyLabel').textContent = cfgState.redes.postsQty + (cfgState.redes.postsQty===1?' post':' posts');
+      document.getElementById('postsPrice').textContent = postPackPrice(cfgState.redes.postsQty) + '€';
+      cfgFillRange(postsSlider);
+
+      document.getElementById('reelsPrice').textContent = (REEL_PRICES[cfgState.redes.reelComplexity] * cfgState.redes.reelQty) + '€';
+
+      const sTier = SEO_TIERS[cfgState.seo.tierIdx];
+      document.getElementById('seoTierName').textContent = sTier.name + ' · ' + sTier.posts + ' entrada' + (sTier.posts>1?'s':'') + '/mes';
+      document.getElementById('seoTierPrice').textContent = (cfgState.isAnnual ? sTier.annual : sTier.monthly) + '€/mes';
+      cfgFillRange(seoSlider);
+
+      document.getElementById('editorialPrice').textContent = cfgState.diseno.editorial ? (Math.max(400, cfgState.diseno.editorialPages*35)) + '€' : 'Desde 400€';
+      document.getElementById('piezaPrice').textContent = cfgState.diseno.pieza ? (60*cfgState.diseno.piezaQty) + '€' : 'Desde 60€';
+
+      const items = [];
+      let totalUnico = 0, totalRecurrente = 0;
+
+      if(cfgState.redes.active){
+        if(cfgState.redes.mode==='gestion'){
+          const price = cfgState.isAnnual ? rTier.annual : rTier.monthly;
+          items.push({label:'Redes — Plan ' + rTier.name + ' (' + rTier.redes + ' red, ' + rTier.pubs + ' pub/mes)', price:price, suffix:'/mes'});
+          totalRecurrente += price;
+        } else if(cfgState.redes.mode==='packs'){
+          if(cfgState.redes.wantPosts){
+            const price = postPackPrice(cfgState.redes.postsQty);
+            items.push({label:'Redes — ' + cfgState.redes.postsQty + ' posts sueltos (autopublicar)', price:price, suffix:''});
+            totalUnico += price;
+          }
+          if(cfgState.redes.wantReels){
+            const unit = REEL_PRICES[cfgState.redes.reelComplexity];
+            const price = unit * cfgState.redes.reelQty;
+            items.push({label:'Redes — ' + cfgState.redes.reelQty + ' reel(s) suelto(s), complejidad ' + cfgState.redes.reelComplexity, price:price, suffix:''});
+            totalUnico += price;
+          }
+        } else if(cfgState.redes.mode==='plantillas' && cfgState.redes.template){
+          const tpl = TEMPLATE_PACKS[cfgState.redes.template];
+          items.push({label:'Redes — ' + tpl.label, price:tpl.price, suffix:''});
+          totalUnico += tpl.price;
+        }
+        if(cfgState.redes.communityManager){
+          items.push({label:'Community Manager (comentarios y comunidad)', price:null, suffix:''});
+        }
+      }
+
+      if(cfgState.web.active && cfgState.web.tier){
+        const w = WEB_TIERS[cfgState.web.tier];
+        items.push({label:'Web — ' + w.label, price:w.price, suffix:''});
+        totalUnico += w.price;
+      }
+
+      if(cfgState.seo.active){
+        const price = cfgState.isAnnual ? sTier.annual : sTier.monthly;
+        items.push({label:'SEO — Plan ' + sTier.name + ' (' + sTier.posts + ' entrada' + (sTier.posts>1?'s':'') + '/mes)', price:price, suffix:'/mes'});
+        totalRecurrente += price;
+      }
+
+      if(cfgState.diseno.active){
+        if(cfgState.diseno.completa){
+          items.push({label:'Diseño — Identidad de marca completa', price:980, suffix:''});
+          totalUnico += 980;
+        } else {
+          if(cfgState.diseno.logo){ items.push({label:'Diseño — Logotipo', price:150, suffix:''}); totalUnico += 150; }
+          if(cfgState.diseno.manual){ items.push({label:'Diseño — Manual de marca', price:300, suffix:''}); totalUnico += 300; }
+          if(cfgState.diseno.papeleria){ items.push({label:'Diseño — Papelería corporativa', price:150, suffix:''}); totalUnico += 150; }
+        }
+        if(cfgState.diseno.tipografia){ items.push({label:'Diseño — Sistema tipográfico', price:90, suffix:''}); totalUnico += 90; }
+        if(cfgState.diseno.basica){ items.push({label:'Diseño — Identidad básica', price:350, suffix:''}); totalUnico += 350; }
+        if(cfgState.diseno.editorial){
+          const p = Math.max(400, cfgState.diseno.editorialPages*35);
+          items.push({label:'Diseño — Editorial (' + cfgState.diseno.editorialPages + ' páginas)', price:p, suffix:''});
+          totalUnico += p;
+        }
+        if(cfgState.diseno.pieza){
+          const p = 60*cfgState.diseno.piezaQty;
+          items.push({label:'Diseño — Pieza gráfica suelta ×' + cfgState.diseno.piezaQty, price:p, suffix:''});
+          totalUnico += p;
+        }
+      }
+
+      const listEl = document.getElementById('summaryList');
+      const emptyEl = document.getElementById('summaryEmpty');
+      const totalsEl = document.getElementById('summaryTotals');
+      const ctaEl = document.getElementById('summaryCta');
+      const floatEl = document.getElementById('floatingTotal');
+
+      if(items.length===0){
+        emptyEl.style.display = 'block';
+        listEl.innerHTML = '';
+        totalsEl.style.display = 'none';
+        ctaEl.classList.add('disabled');
+        floatEl.classList.remove('show');
+      } else {
+        emptyEl.style.display = 'none';
+        listEl.innerHTML = items.map(i => '<div class="summary-item"><span class="si-label">' + i.label + '</span><span class="si-price">' + (i.price!==null ? fmt(i.price)+i.suffix : 'A consultar') + '</span></div>').join('');
+        totalsEl.style.display = 'block';
+
+        document.getElementById('totalUnicoRow').style.display = totalUnico>0 ? 'flex' : 'none';
+        document.getElementById('totalUnico').textContent = fmt(totalUnico);
+        document.getElementById('totalRecurrenteRow').style.display = totalRecurrente>0 ? 'flex' : 'none';
+        document.getElementById('totalRecurrente').textContent = fmt(totalRecurrente) + '/mes';
+        document.getElementById('totalRecurrenteLabel').textContent = cfgState.isAnnual ? 'Cuota mensual (facturado anual)' : 'Cuota mensual';
+
+        ctaEl.classList.remove('disabled');
+        let floatParts = [];
+        if(totalUnico>0) floatParts.push(fmt(totalUnico));
+        if(totalRecurrente>0) floatParts.push(fmt(totalRecurrente)+'/mes');
+        floatEl.textContent = 'Tu Kairea: ' + floatParts.join(' + ');
+        floatEl.classList.add('show');
+
+        let msg = 'Hola, he montado esta configuración en vuestra web:\n';
+        items.forEach(i => { msg += '- ' + i.label + ': ' + (i.price!==null ? fmt(i.price)+i.suffix : 'a consultar') + '\n'; });
+        msg += '\n';
+        if(totalUnico>0) msg += 'Pago único aprox: ' + fmt(totalUnico) + '\n';
+        if(totalRecurrente>0) msg += 'Cuota recurrente aprox: ' + fmt(totalRecurrente) + '/mes' + (cfgState.isAnnual?' (facturado anual)':'') + '\n';
+        msg += '\n¿Hablamos?';
+        ctaEl.href = 'https://wa.me/34624344097?text=' + encodeURIComponent(msg);
+      }
+    }
+
+    document.getElementById('floatingTotal').addEventListener('click', ()=>{
+      document.getElementById('summaryPanel').scrollIntoView({behavior:'smooth', block:'center'});
+    });
+
+    cfgFillRange(redesSlider); cfgFillRange(postsSlider); cfgFillRange(seoSlider);
+    cfgRender();
+  })();
+</script>
+
+<script>
+  // aviso de cookies — se muestra una vez por navegador hasta que se acepte
+  (function(){
+    var CONSENT_KEY = 'kaireaCookieConsent';
+    var banner = document.getElementById('cookieBanner');
+    var acceptBtn = document.getElementById('cookieAcceptBtn');
+    if(!banner || !acceptBtn) return;
+
+    var alreadyAccepted = false;
+    try { alreadyAccepted = localStorage.getItem(CONSENT_KEY) === 'accepted'; } catch(e) {}
+
+    if(!alreadyAccepted){
+      setTimeout(function(){ banner.classList.add('show'); }, 600);
+    }
+
+    acceptBtn.addEventListener('click', function(){
+      try { localStorage.setItem(CONSENT_KEY, 'accepted'); } catch(e) {}
+      banner.classList.remove('show');
+    });
+  })();
+</script>
+
+</body>
+</html>
