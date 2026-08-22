@@ -9,6 +9,7 @@
 <link rel="canonical" href="https://kaireaestudio.com/">
 <meta name="author" content="Kairea">
 <meta name="theme-color" content="#1C1512">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231C1512'/%3E%3Ctext x='18' y='72' font-family='Georgia,serif' font-weight='700' font-size='60' fill='%23F5EFE6'%3EK%3C/text%3E%3Ccircle cx='78' cy='24' r='10' fill='%23C1502E'/%3E%3C/svg%3E">
 
 <!-- Open Graph / Facebook, Instagram, WhatsApp, LinkedIn -->
 <meta property="og:type" content="website">
@@ -37,9 +38,57 @@
   "url": "https://kaireaestudio.com/",
   "description": "Estudio creativo para autónomos y pymes: gestión de redes sociales, SEO/gestión de blog y webs en HTML propio, sin plantillas ni rotación de gestores.",
   "email": "info@kaireaestudio.com",
+  "telephone": "+34624344097",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Barcelona",
+    "addressCountry": "ES"
+  },
   "areaServed": "ES",
   "priceRange": "€€",
   "sameAs": []
+}
+</script>
+
+<!-- Datos estructurados: preguntas frecuentes, para rich snippets en Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Es esto muy caro para un negocio pequeño?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de lo que necesites, por eso el precio se ajusta desde 89€/mes en redes o desde 450€ en una landing — no hay un paquete único. Habla con nosotros o pruébalo tú mismo en el configurador, verás el precio moverse en tiempo real antes de escribirnos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si no encaja mi proyecto con vosotros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Te lo decimos en el diagnóstico gratuito, sin rodeos. Preferimos no coger un proyecto que no podemos cuidar bien antes que cobrarte por algo a medias."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto se tarda en tener algo funcionando?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una landing suele estar lista en 7-10 días. En redes y SEO, el calendario del primer mes se define en la propuesta inicial — con plazos reales, no genéricos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo dejarlo cuando quiera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Los servicios recurrentes no tienen permanencia. Si algo no está funcionando, lo hablamos primero — pero no te atamos con letra pequeña."
+      }
+    }
+  ]
 }
 </script>
 
@@ -402,6 +451,78 @@
   .mini-config-btn{display:block;margin-top:20px;padding:12px 22px;border-radius:100px;border:1px dashed var(--ambar);background:transparent;color:var(--ambar);font-size:0.85rem;font-weight:600;cursor:pointer;transition:background .2s ease;}
   .mini-config-btn:hover{background:rgba(232,169,76,0.1);}
 
+  /* ===== CTA DESTACADA "HAZ TU PROPIO KAIREA" ===== */
+  .config-cta-section{border-top:1px solid var(--line);}
+  .config-cta-frame{
+    padding:1px;border-radius:29px;
+    background:linear-gradient(120deg, var(--terracota), rgba(232,169,76,0.15) 35%, rgba(193,80,46,0.15) 65%, var(--ambar));
+  }
+  .config-cta-panel{
+    position:relative;overflow:hidden;
+    background:linear-gradient(160deg, var(--ink-raise), var(--ink) 70%);
+    border-radius:28px;
+    padding:64px 56px;
+    display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;
+  }
+  .config-cta-panel::before{
+    content:"";position:absolute;inset:-30% -10%;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(circle at 12% 20%, rgba(193,80,46,0.32), transparent 45%),
+      radial-gradient(circle at 88% 82%, rgba(232,169,76,0.24), transparent 50%);
+    filter:blur(50px);
+    animation:drift 16s ease-in-out infinite alternate;
+  }
+  .config-cta-content{position:relative;z-index:2;}
+  .config-cta-title{
+    font-size:clamp(1.7rem,3.4vw,2.5rem);max-width:17ch;margin-bottom:18px;
+    background:linear-gradient(100deg, var(--crema) 30%, var(--ambar) 50%, var(--terracota) 65%, var(--crema) 85%);
+    background-size:250% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    animation:shine 7s linear infinite;
+  }
+  .config-cta-sub{color:var(--crema-dim);font-size:1.02rem;max-width:48ch;margin-bottom:26px;}
+  .config-cta-points{list-style:none;padding:0;margin:0 0 34px;display:flex;flex-direction:column;gap:11px;}
+  .config-cta-points li{display:flex;align-items:center;gap:10px;font-size:0.92rem;color:var(--crema);}
+  .config-cta-points li span{color:var(--ambar);font-size:0.7rem;}
+  .config-cta-btn{
+    position:relative;background:linear-gradient(135deg, var(--terracota), var(--ambar));
+    background-size:180% 180%;color:var(--ink-deep);
+    padding:20px 40px;border-radius:100px;font-weight:700;font-size:1.05rem;font-family:inherit;
+    border:none;cursor:pointer;display:inline-flex;align-items:center;gap:12px;
+    box-shadow:0 10px 34px rgba(193,80,46,0.4);
+    transition:transform .25s ease, box-shadow .25s ease, background-position .5s ease;
+    animation:ctaPulse 2.6s ease-in-out infinite;
+  }
+  .config-cta-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 42px rgba(193,80,46,0.55);background-position:100% 50%;}
+  .config-cta-btn-arrow{display:inline-block;transition:transform .25s ease;}
+  .config-cta-btn:hover .config-cta-btn-arrow{transform:translateX(4px);}
+  @keyframes ctaPulse{
+    0%,100%{box-shadow:0 10px 34px rgba(193,80,46,0.4);}
+    50%{box-shadow:0 10px 46px rgba(232,169,76,0.6);}
+  }
+  .config-cta-note{margin-top:16px;font-size:0.8rem;color:var(--crema-dim);opacity:0.8;}
+  .config-cta-visual{
+    position:relative;z-index:2;background:var(--ink);border:1px solid var(--line);
+    border-radius:20px;padding:30px 26px 26px;
+  }
+  .config-mini-bar{margin-bottom:20px;}
+  .config-mini-bar span{display:block;font-size:0.78rem;color:var(--crema-dim);margin-bottom:8px;}
+  .config-mini-track{height:8px;border-radius:100px;background:var(--ink-raise);border:1px solid var(--line);overflow:hidden;}
+  .config-mini-fill{height:100%;border-radius:100px;width:0;background:linear-gradient(90deg, var(--terracota), var(--ambar));transition:width 1.3s cubic-bezier(.2,.8,.2,1);}
+  .config-mini-bar:nth-child(1) .config-mini-fill{transition-delay:.15s;}
+  .config-mini-bar:nth-child(2) .config-mini-fill{transition-delay:.35s;}
+  .config-mini-bar:nth-child(3) .config-mini-fill{transition-delay:.55s;}
+  .reveal.in .config-mini-fill{width:var(--fill);}
+  .config-mini-total{text-align:center;font-family:'Fraunces',serif;font-size:1.2rem;color:var(--ambar);padding-top:18px;margin-top:6px;border-top:1px dashed var(--line);}
+  .config-mini-total strong{color:var(--crema);}
+  @media(max-width:980px){
+    .config-cta-panel{grid-template-columns:1fr;padding:48px 32px;}
+    .config-cta-title{max-width:none;}
+  }
+  @media(max-width:640px){
+    .config-cta-panel{padding:38px 22px;}
+    .config-cta-btn{width:100%;justify-content:center;padding:18px 28px;}
+  }
+
   /* ===== CONFIGURADOR INCRUSTADO ("Haz tu Kairea ideal") ===== */
   .configurator-layout{display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start;margin-top:32px;}
   @media(max-width:980px){.configurator-layout{grid-template-columns:1fr;}}
@@ -574,12 +695,17 @@
     100%{opacity:0;transform:scale(9);}
   }
 
-  footer{ border-top:1px solid var(--line); padding:38px 0; text-align:center; color:var(--crema-dim); font-size:0.85rem; position:relative;z-index:3; }
-  .footer-inner{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  footer{ border-top:1px solid var(--line); padding:28px 0; text-align:center; color:var(--crema-dim); font-size:0.85rem; position:relative;z-index:3; }
+  .footer-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;}
+  .footer-main{display:flex;flex-wrap:wrap;align-items:center;gap:8px;}
   .footer-brand{font-family:'Fraunces',serif;color:var(--crema-dim);}
-  .footer-contact a,.footer-links a{color:var(--crema-dim);text-decoration:none;transition:color .2s ease;}
-  .footer-contact a:hover,.footer-links a:hover{color:var(--ambar);}
+  .footer-contact a{color:var(--crema-dim);text-decoration:none;transition:color .2s ease;}
+  .footer-contact a:hover{color:var(--ambar);}
+  .footer-legal{display:flex;align-items:center;gap:8px;font-size:0.72rem;}
+  .footer-legal a{color:var(--crema-dim);text-decoration:none;transition:color .2s ease;}
+  .footer-legal a:hover{color:var(--terracota);}
   .footer-dot{opacity:0.5;margin:0 2px;}
+  @media(max-width:640px){.footer-inner{justify-content:center;text-align:center;}}
 
   /* AVISO DE COOKIES */
   .cookie-banner{
@@ -711,6 +837,9 @@
     .ticker-track, .trust-track{animation:none;}
     #drops{display:none;}
     .bounce-ball{display:none;}
+    .config-cta-panel::before{animation:none;}
+    .config-cta-title{animation:none;background-position:0 center;}
+    .config-cta-btn{animation:none;}
   }
 </style>
 </head>
@@ -891,9 +1020,44 @@
       </form>
     </div>
 
-    <div class="reveal" style="text-align:center;margin-top:36px;">
-      <button type="button" class="btn-primary config-open-btn" id="openConfigBtn" style="border:none;">Haz tu propio Kairea</button>
-      <p style="margin-top:14px;font-size:0.85rem;color:var(--crema-dim);">Elige tú la combinación exacta — publicaciones sueltas, reels, plantillas o gestión completa. El precio se ajusta al momento, delante de ti.</p>
+  </div>
+</section>
+
+<section id="configurador-cta" class="config-cta-section">
+  <div class="wrap">
+    <div class="config-cta-frame reveal">
+      <div class="config-cta-panel">
+        <div class="config-cta-content">
+          <div class="eyebrow">Configurador en vivo</div>
+          <h2 class="config-cta-title">Combina justo lo que necesitas. Ni un euro de más.</h2>
+          <p class="config-cta-sub">Nada de packs cerrados ni de "planes" pensados para vender, no para ti. Aquí eliges tú qué entra y qué no — y ves el precio moverse en tiempo real, delante de tus ojos.</p>
+          <ul class="config-cta-points">
+            <li><span>◆</span> Sin llamadas comerciales ni presión</li>
+            <li><span>◆</span> El precio se ajusta mientras decides</li>
+            <li><span>◆</span> Te lo mandamos por WhatsApp tal cual lo dejes</li>
+          </ul>
+          <button type="button" class="config-cta-btn config-open-btn" id="openConfigBtn">
+            <span>Haz tu propio Kairea</span>
+            <span class="config-cta-btn-arrow">→</span>
+          </button>
+          <div class="config-cta-note">🎛 30 segundos. Sin registro. Sin compromiso.</div>
+        </div>
+        <div class="config-cta-visual" aria-hidden="true">
+          <div class="config-mini-bar">
+            <span>Redes sociales</span>
+            <div class="config-mini-track"><div class="config-mini-fill" style="--fill:65%;"></div></div>
+          </div>
+          <div class="config-mini-bar">
+            <span>SEO / Blog</span>
+            <div class="config-mini-track"><div class="config-mini-fill" style="--fill:40%;"></div></div>
+          </div>
+          <div class="config-mini-bar">
+            <span>Web</span>
+            <div class="config-mini-track"><div class="config-mini-fill" style="--fill:82%;"></div></div>
+          </div>
+          <div class="config-mini-total">Tu Kairea: <strong>184€/mes</strong></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1493,13 +1657,19 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <div class="footer-brand">Kairea © 2026</div>
-    <div class="footer-contact">
-      <a href="mailto:info@kaireaestudio.com">info@kaireaestudio.com</a>
-      <span class="footer-dot">·</span>
-      <a href="https://wa.me/34624344097?text=Hola%2C%20quiero%20contarte%20mi%20proyecto" target="_blank" rel="noopener">624 34 40 97</a>
+    <div class="footer-main">
+      <div class="footer-brand">Kairea © 2026</div>
+      <div class="footer-contact">
+        <a href="mailto:info@kaireaestudio.com">info@kaireaestudio.com</a>
+        <span class="footer-dot">·</span>
+        <a href="https://wa.me/34624344097?text=Hola%2C%20quiero%20contarte%20mi%20proyecto" target="_blank" rel="noopener">624 34 40 97</a>
+      </div>
     </div>
-    <div class="footer-links">
+    <div class="footer-legal">
+      <a href="aviso-legal.html">Aviso legal</a>
+      <span class="footer-dot">·</span>
+      <a href="politica-privacidad.html">Privacidad</a>
+      <span class="footer-dot">·</span>
       <a href="politica-cookies.html">Cookies</a>
     </div>
   </div>
